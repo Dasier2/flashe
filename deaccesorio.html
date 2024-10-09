@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/oferta.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body class="bg-body-tertiary">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/logo_op2.png" alt="" class="logo_img"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn bg-warning-subtle rounded-0">Todo</button>
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn bg-warning-subtle dropdown-toggle rounded-0 p-1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="moda.html">Moda</a>
+                <a class="dropdown-item" href="accesorios.html">Accesorios</a>
+                <a class="dropdown-item" href="hogar.html">Hogar</a>
+                <a class="dropdown-item" href="Electrodomesticos.html">Electrodomesticos</a>
+                <a class="dropdown-item" href="belleza.html">Belleza</a>
+              </div>
+            </div>
+          </div>
+          <form class="d-flex">
+            <input class="form-control rounded-0 busqueda" type="search" placeholder="¿Que estas buscando?">
+            <button class="btn bg-secondary-subtle my-2 my-sm-0 rounded-0" type="submit"><img src="img/lupa.png" class="lupa" ></button>
+          </form>
+
+        </div>
+        <div class="collapse navbar-collapse lista justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li id="registrate" class="nav-item dropdown">
+                <button  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Registrate</button>
+                <ul class="dropdown-menu dropdown-menu-dark" id="inicioseccion" style="display: none;">
+                  <li>
+                    <a class="dropdown-item" href="crearCuenta.html"> Crear mi Cuenta</a></li>
+                  <li>
+                    <a id="iniciarseccion" class="dropdown-item" href="inicioseccion.html"> Inicia Sección </a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Categorias</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Tegnologia </a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="detecnologia.html">Celulares</a></li>
+                        <li><a class="dropdown-item" href="detecnologia.html">Computación</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Hogar</a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="hogar.html ">Muebles/Sala</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Dormitorio</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">oficina en casa</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Herramientas</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Seguridad para el Hogar</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Ver Mas</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Moda</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="moda.html">Mujer</a></li>
+                        <li><a class="dropdown-item" href="moda.html">Hombre</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Belleza</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="belleza.html">Maquillaje</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Electrobelleza</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Cuidado Personal</a></li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+            
+            <button class="btn" type="button"><img class="carrito" src="./img/pngwing.com (1).png" ></button>
+          </div>
+          
+      </div>
+  </nav>
+  </header>
+
+  <section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 ">
+      <button class="ubicacion border-0  ms-4">
+      <select class="ubicacion bg-body-tertiary border-0 text-center">
+        <option>Ingresa Tu cuidad</option>
+        <option>Bogotá</option>
+        <option>Cartagena</option>
+        <option>Medellín</option>
+        <option>Santa Marta</option>
+        <option>Valledupar</option>
+        <option>barranquilla</option>
+      </select>
+      </button>
+
+      
+
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link oferta" href="ofertas.html">OFERTAS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">CENTRO DE AYUDA</a>
+              <ul class="dropdown-menu dropdown-menu-tertiary">
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con tu pedido</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el sitio web</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el vendedor</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Otros</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a id="rastreoPedido" class="nav-link" href="rastreo.html">RASTREA TU PEDIDO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <div class="d-flex ms-4 mt-5" >
+    <form>
+      <div class="mb-4">
+        <h5>Todo</h5>
+      <p>20 productos</p>
+      <div class="form-check form-switch">
+       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+       <label class="form-check-label" for="flexSwitchCheckDefault">Oferta Relampago</label>
+     </div>
+     <div class="form-check form-switch">
+       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+       <label class="form-check-label" for="flexSwitchCheckChecked">Envío Turbo</label>
+     </div>
+     <div class="form-check form-switch">
+       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+       <label class="form-check-label" for="flexSwitchCheckDefault">Oferta del Día</label>
+     </div>
+      </div>
+   
+     <div class="mb-4">
+       <ul>
+         <li><h5>Categorías</h5></li>
+         <li>Relojes y Joyas</li>
+         <li>Para Vehiculos</li>
+         <li>Bolsos</li>
+         <li>Zapatos</li>
+         <li>Para el Hogar</li>
+       </ul>
+     </div>
+   
+     <div class="mb-4">
+       <ul>
+         <li>Envío Gratis</li>
+       </ul>
+     </div>
+   
+     <div>
+       <ul>
+         <li><h5>Precio</h5></li>
+         <li>Hasta $50.000</li>
+         <li>$50.000 a $150.000</li>
+         <li>Más de $150.000</li>
+       </ul>
+       <div class=" d-flex me-3 align-items-center">
+        <p class="m-2">5.000</p>
+       <label for="customRange1" class="form-label "></label>
+       <input type="range" class="form-range" id="customRange1">
+       <p class="m-2">5.000.000</p>
+      </div>
+     </div>
+     </form>
+     
+     <section class="cuerpo">
+       <div class="row row-cols-1 row-cols-md-3 g-4">
+           <div class="col">
+             <div class="card">
+                <a class="text-decoration-none text-dark" href="accesoriovehiculo2.html">
+                    <img src="	https://http2.mlstatic.com/D_Q_NP_965771-MLU71763263725_092023-AB.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h2 class="card-title mt-0">$616.831</h2>
+                    <p class="card-text">Cámara Para Auto 70mai Omni Rotación 360° Sensores Y Gps.</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col">
+             <div class="card">
+                <a class="text-decoration-none text-dark" href="accesoriovehiculo3.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_872944-MLU77930910591_072024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$229.900</h4>
+                      <p class="card-text">Xiaomi 70mai 1s 1080p Camara Dvr Auto Dash Smart Wifi</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+             </div>
+           </div>
+           <div class="col">
+             <div class="card">
+                <a class="text-decoration-none text-dark" href="accesoriovehiculo4.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_915010-MCO50961356981_082022-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$109.900</h4>
+                      <p class="card-text">Kit Switch Encendido Xtz 125 + Tapa De Gasolina + Seguro.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+             </div>
+           </div>
+           <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="accesoriovehiculo5.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_939585-MCO51935506174_102022-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$199.000</h4>
+                      <p class="card-text">Kit Exploradoras Duster 2012-2019, Logan, Sandero.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="accesoriovehiculo6.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_850735-MCO43693933257_102020-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$45.900</h4>
+                      <p class="card-text">Exploradoras Halogenas Logan Sandero Kangoo Duster Eco Sport.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="accesoriovehiculo1.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_763496-MLU75947534619_042024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h6 class="subtitle mb-0 text-danger">$75.000</h6>
+                      <h2 class="card-title mt-0">$377.800</h2>
+                      <p class="card-text">Kit de 2 llantas Compasal Blazer HP P 185/65R15 88 H</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="camara2.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_869977-MLU72604609591_102023-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h2 class="card-title mt-0">$80.700</h2>
+                      <p class="card-text">Tp-link, Cámara De Seguridad Wifi, Full Hd, Audio, Tapo C100 Color Blanco</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="camara3.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_805834-MLA77116966065_062024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$72.610</h4>
+                      <p class="card-text">Cámara De Seguridad Domo 1080p Color En La Noche Color Blanco</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="camara1.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_714963-MLU75357646135_032024-P.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title mt-0">$90.500</h4>
+                    <p class="card-text">Cámara de seguridad Tapo link C200 Ip Wifi Robótica, Full Hd / Audio, Tapo C200 Color Blanco.</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="reloj6.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_731806-MLU74368634358_022024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$488.800</h4>
+                      <p class="card-text">Smartwatch Huawei Watch Fit 3 Verde.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="reloj5.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_622468-MLA72075490213_102023-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.221.900</h4>
+                      <p class="card-text">Apple Watch SE GPS (2da Gen) • Caja de aluminio color medianoche de 44 mm • Correa deportiva color medianoche - M/L.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="reloj4.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_922335-MLA52128091594_102022-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.883.900</h4>
+                      <p class="card-text">Apple Watch Ultra GPS + Celular - Caja de titanio 49 mm - Correa Ocean medianoche.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="reloj3.html">
+                    <img src="	https://http2.mlstatic.com/D_Q_NP_809370-MLA72016039184_102023-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.022.900</h4>
+                      <p class="card-text">Apple Watch SE GPS (2da Gen) • Caja de aluminio color medianoche de 40 mm • Correa deportiva color medianoche - M/L.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="reloj1.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_733580-MLA72063241888_102023-W.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.659.900</h4>
+                      <p class="card-text">Apple Watch Series 9 GPS • Caja de aluminio color medianoche de 45 mm.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="reloj2.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_933551-MLU77947858360_082024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.412.900</h4>
+                      <p class="card-text">Apple Watch SE GPS - Caja de aluminio blanco estelar 44 mm - Correa deportiva blanco estelar - Patrón.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+        </div>
+        
+     </section>
+  </div>
+
+  <button class="vermas"><a class="text-decoration-none text-dark" href="detodo.html">VER MÁS</a></button>
+
+  <footer class="bg-dark text-light mt-5">
+
+    <table class="table table-dark table-borderless text-center">
+      <br>
+      <tr>
+        <th>Gana Dinero con Nosotros</th>
+        <th>Sobre Nosotros</th>
+        <th>Ayuda</th>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Vender productos en Flash-e</a></td>
+        <td><a href="#" class="pie">Terminos & Condiciones</a></td>
+        <td><a href="#" class="pie">Contactanos</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie"> Programa de Referidos</a></td>
+        <td><a href="#" class="pie"> Privacidad de Datos</a></td>
+        <td><a href="#" class="pie">Problemas con tu Pago</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Anuncia tus Productos</a></td>
+        <td><a href="#" class="pie">Preguntas Frecuentes</a></td>
+        <td><a href="#" class="pie">Denuncia Fraude</a></td>
+      </tr>
+    </table>
+    
+    <div class="ms-5 me-5">
+      <table class="table  text-center">
+        <h2 class="text-center mb-0">Metodos de Pago</h2>
+        <tr>
+          <th>VISA</th>
+          <th>MASTERCARD</th>
+          <th>AMERICAN EXPRESS</th>
+        </tr>
+        <tr class="table-borderless">
+          <td class="mb-0"><img style="width: 60px;" src="./img/visa.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/mastercard.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/amex.png"></td>
+        </tr>
+      </table>
+    </div>
+    <p class="text-end me-3" style="font-size: smaller;">© 2024 Flashe.com</p>
+      </div>
+        
+    </div>
+  </footer>
+</body>
+<script src="./js/java.js"></script>
+</html>

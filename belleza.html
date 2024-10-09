@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/belleza.css">
+    <link rel="stylesheet" href="./css/hogar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body class="bg-body-tertiary">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/logo_op2.png" alt="" class="logo_img"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn bg-warning-subtle rounded-0">Todo</button>
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn bg-warning-subtle dropdown-toggle rounded-0 p-1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="moda.html">Moda</a>
+                <a class="dropdown-item" href="accesorios.html">Accesorios</a>
+                <a class="dropdown-item" href="hogar.html">Hogar</a>
+                <a class="dropdown-item" href="Electrodomesticos.html">Electrodomesticos</a>
+                <a class="dropdown-item" href="belleza.html">Belleza</a>
+              </div>
+            </div>
+          </div>
+          <form class="d-flex">
+            <input class="form-control rounded-0 busqueda" type="search" placeholder="¿Que estas buscando?">
+            <button class="btn bg-secondary-subtle my-2 my-sm-0 rounded-0" type="submit"><img src="img/lupa.png" class="lupa" ></button>
+          </form>
+
+        </div>
+        <div class="collapse navbar-collapse lista justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li id="registrate" class="nav-item dropdown">
+                <button  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Registrate</button>
+                <ul class="dropdown-menu dropdown-menu-dark" id="inicioseccion" style="display: none;">
+                  <li>
+                    <a class="dropdown-item" href="crearCuenta.html"> Crear mi Cuenta</a></li>
+                  <li>
+                    <a id="iniciarseccion" class="dropdown-item" href="inicioseccion.html"> Inicia Sección </a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Categorias</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Tegnologia </a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="detecnologia.html">Celulares</a></li>
+                        <li><a class="dropdown-item" href="detecnologia.html">Computación</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Hogar</a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="hogar.html ">Muebles/Sala</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Dormitorio</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">oficina en casa</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Herramientas</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Seguridad para el Hogar</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Ver Mas</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Moda</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="moda.html">Mujer</a></li>
+                        <li><a class="dropdown-item" href="moda.html">Hombre</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Belleza</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="belleza.html">Maquillaje</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Electrobelleza</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Cuidado Personal</a></li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+            
+            <button class="btn" type="button"><img class="carrito" src="./img/pngwing.com (1).png" ></button>
+          </div>
+          
+      </div>
+  </nav>
+  </header>
+
+  <section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 ">
+      <button class="ubicacion border-0  ms-4">
+      <select class="ubicacion bg-body-tertiary border-0 text-center">
+        <option>Ingresa Tu cuidad</option>
+        <option>Bogotá</option>
+        <option>Cartagena</option>
+        <option>Medellín</option>
+        <option>Santa Marta</option>
+        <option>Valledupar</option>
+        <option>barranquilla</option>
+      </select>
+      </button>
+
+      
+
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link oferta" href="ofertas.html">OFERTAS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">CENTRO DE AYUDA</a>
+              <ul class="dropdown-menu dropdown-menu-tertiary">
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con tu pedido</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el sitio web</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el vendedor</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Otros</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a id="rastreoPedido" class="nav-link" href="rastreo.html">RASTREA TU PEDIDO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <img class="bannerbelleza" src="./img/bannerbelleza.jpg">
+
+  <div class="m-5">
+    <h4>RECOMENDADOS PARA TI</h4>
+    <div id="carouselExample2" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card-group ">
+            <div class="card me-3 p-2">
+              <a class="text-decoration-none text-dark" href="cuidadofacial2.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_822113-CBT73787747836_012024-AB.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$62.653</h4>
+                  <p class="card-text">Dispositivo De Estiramiento Facial De Microcorriente Usb En.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+            <div class="card me-3 pt-2">
+              <a class="text-decoration-none text-dark" href="cuidadofacial5.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_785721-MCO53895965668_022023-AB.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$27.195</h4>
+                  <p class="card-text">Molde Facial Silicona Hielo.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+            <div class="card me-3 pt-2">
+              <a class="text-decoration-none text-dark" href="cuidadofacial3.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_886087-MCO75457116304_042024-AB.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$4.559.000</h4>
+                  <p class="card-text">Skindion Rejuvenecimiento Facial Microcorriente Antiarrugas</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+            <div class="card me-3 pt-2">
+              <a class="text-decoration-none text-dark" href="maquillajecara3.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_675266-MLU76066083803_042024-AB.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$187.000</h4>
+                <p class="card-text">Rare Beauty - Soft Pinch Luminous Powder Blush - Sephora Usa Tono Del Maquillaje Hope - Nude Mauve</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card me-3 pt-2">
+              <a class="text-decoration-none text-dark" href="maquillajeojos1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_603693-MCO41983763615_052020-E.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$22.078</h4>
+                  <p class="card-text">Essence Paleta Sombras The Rose Edition - g</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+            <div class="card pt-2">
+              <a class="text-decoration-none text-dark" href="cuidadofacial4.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_964175-MCO49334906815_032022-T.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$34.377</h4>
+                  <p class="card-text">Globos De Hielo Cara - Facial.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+        </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card-group ">
+            <div class="card me-3 pt-2">
+              <a class="text-decoration-none text-dark" href="maquillajelabios1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_658958-MLA74805955569_022024-E.webp
+                " class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h2 class="card-title mt-0">$63.267</h2>
+                  <p class="card-text">Labial Super Stay Vinyl Ink Charmed x 4.2ml</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+            <div class="card me-3 pt-2">
+              <a class="text-decoration-none text-dark" href="maquillajelabios3.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_803398-MLU75297910533_032024-AB.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$37.900</h4>
+                  <p class="card-text">Sheglam Hot Goss Plumping Lip Gloss-that's Juicy! Color Transparente</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+            <div class="card me-3 pt-2">
+              <a class="text-decoration-none text-dark" href="maquillajelabios2.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_871450-MCO68946849430_042023-E.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h2 class="card-title mt-0">$40.712</h2>
+                  <p class="card-text">Labial Outlast Color & Gloss Covergirl Natural Blush Covergi</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+            <div class="card me-3 pt-2">
+              <a class="text-decoration-none text-dark" href="maquillajecara1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_811014-MLU77602245982_072024-E.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$44.633</h4>
+                <p class="card-text">Corrector Instant Age Rewind Eraser Dark circles 130 Medium x 6ml.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card me-3 pt-2">
+              <a class="text-decoration-none text-dark" href="maquillajecara2.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_783020-MCO48161669032_112021-E.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h2 class="card-title mt-0">$64.141</h2>
+                  <p class="card-text">Base Miracle Touch Max Factor</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+            <div class="card pt-2">
+              <a class="text-decoration-none text-dark" href="cuidadofacial6.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_943690-MCO54915176539_042023-T.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$27.900</h4>
+                  <p class="card-text">Rodillo De Jade Piedra Y Guasha.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+        </div>
+        </div>
+      </div>
+      <button class="botoni carousel-control-prev justify-content-start" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+        <span class=" flecha" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+        </svg></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="botond carousel-control-next justify-content-end" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+        <span class=" flecha" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+        </svg></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="m-5">
+    <h4>ELECTROBELLEZA</h4>
+    <div class="card-group ">
+        <div class="card m-1 p-2 ">
+          <a class="text-decoration-none text-dark" href="secador2.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_2X_714263-MLU77596373566_072024-T.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h2 class="card-title mt-0">$199.900</h2>
+              <p class="card-text">Cepillo Secador Revlon One-step Hair Dryer And Volumizer</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+        </div>
+        <div class="card m-1 pt-2 ">
+          <a class="text-decoration-none text-dark" href="electrobelleza1.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_2X_740749-MCO70541393865_072023-E.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title mt-0">$319.800</h4>
+            <p class="card-text">Plancha Para Cabello Profesional En Titanio Cms Cosmos Navi</p>
+            <p class="card-text envio">Envío Gratis</p>
+          </div>
+          </a>
+        </div>
+        <div class="card m-1 pt-2 ">
+          <a class="text-decoration-none text-dark" href="electrobelleza3.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_2X_798658-MLU78820710779_082024-E.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title mt-0">$293.900</h4>
+              <p class="card-text">Recortadora Afeitadora Eléctrica Braun Serie 5 Mgk5280 9en1</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+        </div>
+        <div class="card m-1 p-2 ">
+          <a class="text-decoration-none text-dark" href="secador1.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_2X_656402-MCO49614508443_042022-E.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h2 class="card-title mt-0">$199.900</h2>
+              <p class="card-text">Cepillo Secador Revlon One-step Hair Dryer And Volumizer</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+    </div>
+    <div class="card m-1 pt-2 ">
+      <a class="text-decoration-none text-dark" href="electrobelleza2.html">
+        <img src="https://http2.mlstatic.com/D_Q_NP_2X_774799-MLU72700919277_112023-T.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2 class="card-title mt-0">$162.700</h2>
+          <p class="card-text">Plancha Alisadora Remington Frizz Therapy Ambientes Húmedos Color Morado 120V/240V</p>
+          <p class="card-text envio">Envío Gratis</p>
+        </div>
+      </a>
+    </div>
+    <div class="card m-1 pt-2 ">
+      <a class="text-decoration-none text-dark" href="secador3.html">
+        <img src="https://http2.mlstatic.com/D_Q_NP_605714-CBT47554992736_092021-AB.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h4 class="card-title mt-0">$41.301</h4>
+          <p class="card-text">Cepillo secador de pelo 5 en 1 con voluminizador</p>
+          <p class="card-text envio">Envío Gratis</p>
+        </div>
+      </a>
+    </div>
+    </div>
+  </div>
+  <div class="m-5">
+    <h4>CUIDADO FACIAL</h4>
+    <div class="card-group ">
+        <div class="card m-1 p-2 ">
+          <a class="text-decoration-none text-dark" href="cuidadofacial3.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_886087-MCO75457116304_042024-AB.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title mt-0">$4.559.000</h4>
+              <p class="card-text">Skindion Rejuvenecimiento Facial Microcorriente Antiarrugas</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+        </div>
+        <div class="card m-1 pt-2 ">
+          <a class="text-decoration-none text-dark" href="cuidadofacial4.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_2X_964175-MCO49334906815_032022-T.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title mt-0">$34.377</h4>
+              <p class="card-text">Globos De Hielo Cara - Facial.</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+        </div>
+        <div class="card m-1 pt-2 ">
+          <a class="text-decoration-none text-dark" href="cuidadofacial5.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_785721-MCO53895965668_022023-AB.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title mt-0">$27.195</h4>
+              <p class="card-text">Molde Facial Silicona Hielo.</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+        </div>
+        <div class="card m-1 p-2 ">
+          <a class="text-decoration-none text-dark" href="cuidadofacial6.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_2X_943690-MCO54915176539_042023-T.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title mt-0">$27.900</h4>
+              <p class="card-text">Rodillo De Jade Piedra Y Guasha.</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+    </div>
+    <div class="card m-1 pt-2 ">
+      <a class="text-decoration-none text-dark" href="cuidadofacial1.html">
+        <img src="https://http2.mlstatic.com/D_Q_NP_972506-CBT75275068600_032024-P.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="subtitle mb-0 text-danger">$50.123</h6>
+          <h2 class="card-title mt-0">$36.297</h2>
+          <p class="card-text">Masajeador Facial Q, Crema Para Eliminar Arrugas Y Estiramie.</p>
+          <p class="card-text envio">Envío Gratis</p>
+        </div>
+      </a>
+    </div>
+    <div class="card m-1 pt-2 ">
+      <a class="text-decoration-none text-dark" href="cuidadofacial2.html">
+        <img src="https://http2.mlstatic.com/D_Q_NP_822113-CBT73787747836_012024-AB.webp" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h4 class="card-title mt-0">$62.653</h4>
+          <p class="card-text">Dispositivo De Estiramiento Facial De Microcorriente Usb En.</p>
+          <p class="card-text envio">Envío Gratis</p>
+        </div>
+      </a>
+    </div>
+    </div>
+  </div> <br><br><br>
+
+  <div>
+    <img src="https://http2.mlstatic.com/D_NQ_NP_706179-MLA77082960352_062024-OO.webp" width="100%">
+    <div class="d-flex mt-3 maquillaje">
+        <div class="card" >
+            <div class="card-body texto">
+                <p class="card-text text-center textos">ROSTRO</p>
+            </div>
+            <a href="debelleza.html"><img src="./img/rostro.jpg" alt="..."></a>
+        </div>
+        <div class="card" >
+            <div class="card-body texto1">
+                <p class="card-text text-center textos">LABIOS</p>
+            </div>
+            <a href="debelleza.html"><img src="./img/labios.jpg" class="card-img" alt="..."></a>
+        </div>
+        <div class="card" >
+            <div class="card-body texto2">
+                <p class="card-text text-center textos">OJOS</p>
+            </div>
+            <a href="debelleza.html"><img src="./img/ojos.jpg" alt="..."></a>
+        </div>
+    </div>
+  </div>
+
+  <section class="cuerpofotos mt-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card cards">
+            <a class="text-decoration-none text-dark" href="maquillajelabios1.html">
+              <img src="https://http2.mlstatic.com/D_Q_NP_2X_658958-MLA74805955569_022024-E.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h2 class="card-title mt-0">$63.267</h2>
+                <p class="card-text">Labial Super Stay Vinyl Ink Charmed x 4.2ml</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+            </a>
+           </div>
+         </div>
+         <div class="col">
+          <div class="card cards">
+            <a class="text-decoration-none text-dark" href="maquillajelabios3.html">
+              <img src="https://http2.mlstatic.com/D_Q_NP_803398-MLU75297910533_032024-AB.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$37.900</h4>
+                <p class="card-text">Sheglam Hot Goss Plumping Lip Gloss-that's Juicy! Color Transparente</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card cards">
+            <a class="text-decoration-none text-dark" href="maquillajecara3.html">
+              <img src="https://http2.mlstatic.com/D_Q_NP_675266-MLU76066083803_042024-AB.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title mt-0">$187.000</h4>
+              <p class="card-text">Rare Beauty - Soft Pinch Luminous Powder Blush - Sephora Usa Tono Del Maquillaje Hope - Nude Mauve</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+         <div class="card cards">
+          <a class="text-decoration-none text-dark" href="maquillajeojos1.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_2X_603693-MCO41983763615_052020-E.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title mt-0">$22.078</h4>
+              <p class="card-text">Essence Paleta Sombras The Rose Edition - g</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+         </div>
+       </div>
+       <div class="col">
+         <div class="card cards">
+          <a class="text-decoration-none text-dark" href="maquillajecara1.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_2X_811014-MLU77602245982_072024-E.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title mt-0">$44.633</h4>
+            <p class="card-text">Corrector Instant Age Rewind Eraser Dark circles 130 Medium x 6ml.</p>
+            <p class="card-text envio">Envío Gratis</p>
+          </div>
+          </a>
+         </div>
+       </div>
+       <div class="col">
+         <div class="card cards">
+          <a class="text-decoration-none text-dark" href="maquillajecara2.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_2X_783020-MCO48161669032_112021-E.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h2 class="card-title mt-0">$64.141</h2>
+              <p class="card-text">Base Miracle Touch Max Factor</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+         </div>
+       </div>
+       <div class="col">
+         <div class="card cards">
+          <a class="text-decoration-none text-dark" href="cuidadofacial1.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_972506-CBT75275068600_032024-P.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="subtitle mb-0 text-danger">$50.123</h6>
+              <h2 class="card-title mt-0">$36.297</h2>
+              <p class="card-text">Masajeador Facial Q, Crema Para Eliminar Arrugas Y Estiramie.</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+         </div>
+       </div>
+       <div class="col">
+         <div class="card cards">
+          <a class="text-decoration-none text-dark" href="cuidadofacial5.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_785721-MCO53895965668_022023-AB.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title mt-0">$27.195</h4>
+              <p class="card-text">Molde Facial Silicona Hielo.</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+         </div>
+       </div>
+       <div class="col">
+        <div class="card cards">
+          <a class="text-decoration-none text-dark" href="cuidadofacial1.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_972506-CBT75275068600_032024-P.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h6 class="subtitle mb-0 text-danger">$50.123</h6>
+              <h2 class="card-title mt-0">$36.297</h2>
+              <p class="card-text">Masajeador Facial Q, Crema Para Eliminar Arrugas Y Estiramie.</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+        </div>
+      </div>
+     </div>
+  </section>
+  <br><br>
+
+  <button class="vermas"><a class="text-decoration-none text-dark" href="detodo.html">VER MÁS</a></button>
+
+  <footer class="bg-dark text-light">
+
+    <table class="table table-dark table-borderless text-center">
+      <br>
+      <tr>
+        <th>Gana Dinero con Nosotros</th>
+        <th>Sobre Nosotros</th>
+        <th>Ayuda</th>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Vender productos en Flash-e</a></td>
+        <td><a href="#" class="pie">Terminos & Condiciones</a></td>
+        <td><a href="#" class="pie">Contactanos</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie"> Programa de Referidos</a></td>
+        <td><a href="#" class="pie"> Privacidad de Datos</a></td>
+        <td><a href="#" class="pie">Problemas con tu Pago</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Anuncia tus Productos</a></td>
+        <td><a href="#" class="pie">Preguntas Frecuentes</a></td>
+        <td><a href="#" class="pie">Denuncia Fraude</a></td>
+      </tr>
+    </table>
+    
+    <div class="ms-5 me-5">
+      <table class="table  text-center">
+        <h2 class="text-center mb-0">Metodos de Pago</h2>
+        <tr>
+          <th>VISA</th>
+          <th>MASTERCARD</th>
+          <th>AMERICAN EXPRESS</th>
+        </tr>
+        <tr class="table-borderless">
+          <td class="mb-0"><img style="width: 60px;" src="./img/visa.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/mastercard.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/amex.png"></td>
+        </tr>
+      </table>
+    </div>
+    <p class="text-end me-3" style="font-size: smaller;">© 2024 Flashe.com</p>
+      </div>
+        
+    </div>
+  </footer>
+</body>
+<script src="./js/java.js"></script>
+</html>

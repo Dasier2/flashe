@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/oferta.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body class="bg-body-tertiary">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/logo_op2.png" alt="" class="logo_img"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn bg-warning-subtle rounded-0">Todo</button>
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn bg-warning-subtle dropdown-toggle rounded-0 p-1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="moda.html">Moda</a>
+                <a class="dropdown-item" href="accesorios.html">Accesorios</a>
+                <a class="dropdown-item" href="hogar.html">Hogar</a>
+                <a class="dropdown-item" href="Electrodomesticos.html">Electrodomesticos</a>
+                <a class="dropdown-item" href="belleza.html">Belleza</a>
+              </div>
+            </div>
+          </div>
+          <form class="d-flex">
+            <input class="form-control rounded-0 busqueda" type="search" placeholder="¿Que estas buscando?">
+            <button class="btn bg-secondary-subtle my-2 my-sm-0 rounded-0" type="submit"><img src="img/lupa.png" class="lupa" ></button>
+          </form>
+
+        </div>
+        <div class="collapse navbar-collapse lista justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li id="registrate" class="nav-item dropdown">
+                <button  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Registrate</button>
+                <ul class="dropdown-menu dropdown-menu-dark" id="inicioseccion" style="display: none;">
+                  <li>
+                    <a class="dropdown-item" href="crearCuenta.html"> Crear mi Cuenta</a></li>
+                  <li>
+                    <a id="iniciarseccion" class="dropdown-item" href="inicioseccion.html"> Inicia Sección </a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Categorias</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Tegnologia </a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="detecnologia.html">Celulares</a></li>
+                        <li><a class="dropdown-item" href="detecnologia.html">Computación</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Hogar</a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="hogar.html ">Muebles/Sala</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Dormitorio</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">oficina en casa</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Herramientas</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Seguridad para el Hogar</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Ver Mas</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Moda</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="moda.html">Mujer</a></li>
+                        <li><a class="dropdown-item" href="moda.html">Hombre</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Belleza</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="belleza.html">Maquillaje</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Electrobelleza</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Cuidado Personal</a></li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+            
+            <button class="btn" type="button"><img class="carrito" src="./img/pngwing.com (1).png" ></button>
+          </div>
+          
+      </div>
+  </nav>
+  </header>
+
+  <section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 ">
+      <button class="ubicacion border-0  ms-4">
+      <select class="ubicacion bg-body-tertiary border-0 text-center">
+        <option>Ingresa Tu cuidad</option>
+        <option>Bogotá</option>
+        <option>Cartagena</option>
+        <option>Medellín</option>
+        <option>Santa Marta</option>
+        <option>Valledupar</option>
+        <option>barranquilla</option>
+      </select>
+      </button>
+
+      
+
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link oferta" href="ofertas.html">OFERTAS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">CENTRO DE AYUDA</a>
+              <ul class="dropdown-menu dropdown-menu-tertiary">
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con tu pedido</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el sitio web</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el vendedor</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Otros</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a id="rastreoPedido" class="nav-link" href="rastreo.html">RASTREA TU PEDIDO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <div class="d-flex ms-4 mt-5" >
+    <form>
+      <div class="mb-4">
+        <h5>Todo</h5>
+      <p>20 productos</p>
+      <div class="form-check form-switch">
+       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+       <label class="form-check-label" for="flexSwitchCheckDefault">Oferta Relampago</label>
+     </div>
+     <div class="form-check form-switch">
+       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+       <label class="form-check-label" for="flexSwitchCheckChecked">Envío Turbo</label>
+     </div>
+     <div class="form-check form-switch">
+       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+       <label class="form-check-label" for="flexSwitchCheckDefault">Oferta del Día</label>
+     </div>
+      </div>
+   
+     <div class="mb-4">
+       <ul>
+         <li><h5>Categorías</h5></li>
+         <li>Celulares</li>
+         <li>Computadores</li>
+         <li>Seguridad para el Hogar</li>
+         <li>Portatiles</li>
+         <li>Electrobelleza</li>
+         <li>Maquillaje</li>
+         <li>Cuidado de la Piel</li>
+         <li>Skin Care</li>
+         <li>Cuidado Personal</li>
+         <li>Freidoras</li>
+         <li>Cafeteras</li>
+         <li>Lavadoras</li>
+         <li>Estufas</li>
+         <li>Ventiladores</li>
+         <li>neveras</li>
+         <li>Para Cocina</li>
+         <li>Para Hogar</li>
+         <li>ropa</li>
+       </ul>
+     </div>
+   
+     <div class="mb-4">
+       <ul>
+         <li>Envío Gratis</li>
+       </ul>
+     </div>
+   
+     <div>
+       <ul>
+         <li><h5>Precio</h5></li>
+         <li>Hasta $50.000</li>
+         <li>$50.000 a $150.000</li>
+         <li>Más de $150.000</li>
+       </ul>
+       <div class=" d-flex me-3 align-items-center">
+        <p class="m-2">5.000</p>
+       <label for="customRange1" class="form-label "></label>
+       <input type="range" class="form-range" id="customRange1">
+       <p class="m-2">5.000.000</p>
+      </div>
+     </div>
+     </form>
+     
+     <section class="cuerpo">
+       <div class="row row-cols-1 row-cols-md-3 g-4">
+           <div class="col">
+             <div class="card">
+                <a class="text-decoration-none text-dark" href="celular2.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_912227-MLA71782903150_092023-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$4.599.900</h4>
+                      <p class="card-text">Apple iPhone 15 (256 GB) - Negro.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+              </div>
+            </div>
+            <div class="col">
+             <div class="card">
+                <a class="text-decoration-none text-dark" href="celular3.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_937455-MLA74439150067_022024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$4.559.000</h4>
+                      <p class="card-text">Samsung Galaxy S24 Ultra 5G Dual SIM 256 GB titanium gray 8 GB RAM.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+             </div>
+           </div>
+           <div class="col">
+             <div class="card">
+                <a class="text-decoration-none text-dark" href="celular4.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_713253-MLA75148190760_032024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.399.900</h4>
+                      <p class="card-text">Samsung Galaxy A55 5G Dual SIM 256 GB azul oscuro 8 GB RAM.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+             </div>
+           </div>
+           <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="celular5.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_946642-MLU78526708808_082024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$3.599.900</h4>
+                      <p class="card-text">Samsung Galaxy S24 Plus 5G Dual SIM 256 GB amber yellow 12 GB RAM.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="celular6.html">
+                    <img src="	https://http2.mlstatic.com/D_Q_NP_748621-MLA76569863127_052024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.439.940</h4>
+                      <p class="card-text">Xiaomi Redmi Note 13 Pro+ 5G Dual SIM 256 GB negro 8 GB RAM.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="celular1.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_912227-MLA71782903150_092023-W.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$4.869.900</h4>
+                      <p class="card-text">Apple iPhone 15 Pro Max (256 GB) - Titanio Azul.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="camara2.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_869977-MLU72604609591_102023-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h2 class="card-title mt-0">$80.700</h2>
+                      <p class="card-text">Tp-link, Cámara De Seguridad Wifi, Full Hd, Audio, Tapo C100 Color Blanco</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="camara3.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_805834-MLA77116966065_062024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$72.610</h4>
+                      <p class="card-text">Cámara De Seguridad Domo 1080p Color En La Noche Color Blanco</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="camara1.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_714963-MLU75357646135_032024-P.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title mt-0">$90.500</h4>
+                    <p class="card-text">Cámara de seguridad Tapo link C200 Ip Wifi Robótica, Full Hd / Audio, Tapo C200 Color Blanco.</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="monitor2.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_762607-MLU75051066960_032024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$649.900</h4>
+                      <p class="card-text">Monitor Samsung Curvo 27 Fhd Diseño Sin Bordes LC27R500 Dark blue gray 100V/240V.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="monitor3.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_606673-MLU73339614523_122023-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$774.900</h4>
+                      <p class="card-text">Monitor Samsung Qhd De 27 Con Panel Ips Y Diseño Ergonómico Color Negro 100V/240V.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="monitor4.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_629321-MLA52579227077_112022-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$667.900</h4>
+                      <p class="card-text">Monitor gamer LG UltraGear 27GQ50F LCD 27" negro 100V/240V.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="monitor5.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_697709-MLU78057481595_072024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$567.900</h4>
+                      <p class="card-text">Monitor LG 27" Full HD IPS 100Hz FreeSync Antirreflejo 27MR400-B Multitasking Negro 110V/220V.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="monitor6.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_827495-MLA48761470945_012022-T.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$639.069</h4>
+                      <p class="card-text">Monitor Gamer Acer CB272 LED 27" Negro 100V/240V.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="portatil2.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_924456-MLU74970438756_032024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.829.900</h4>
+                      <p class="card-text">Computador Portatil Asus X1504za Core I5 1235u 16gb 512gb Color Azul.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="portatil2.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_924456-MLU74970438756_032024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.829.900</h4>
+                      <p class="card-text">Computador Portatil Asus X1504za Core I5 1235u 16gb 512gb Color Azul.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="portatil3.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_676134-MLU74074108678_012024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.929.900</h4>
+                      <p class="card-text">Portatil Asus Vivobook X1504za-nj372 Corei5 1235u 20gb 512gb Azul.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="portatil4.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_905124-MLU77150469439_062024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.883.900</h4>
+                      <p class="card-text">Portatil Asus X1504za-nj891 Intel Corei5-1235u 16gb 1tb Ssd Color Azul.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="portatil5.html">
+                    <img src="	https://http2.mlstatic.com/D_Q_NP_891965-MLA76136106233_052024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.885.900</h4>
+                      <p class="card-text">Potátil V-Series V14 14" color gris 24GB de Ram - 512GB SSD - Intel Core i5.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="portatil6.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_731806-MLU74368634358_022024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$1.250.900</h4>
+                      <p class="card-text">Portátil Asus E1504ga-nj103 Core I3 Ram 8 Gb Ssd 512 Gb 15,6 Color Negro.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+               <a class="text-decoration-none text-dark" href="cuidadofacial1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_972506-CBT75275068600_032024-P.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h6 class="subtitle mb-0 text-danger">$50.123</h6>
+                     <h2 class="card-title mt-0">$36.297</h2>
+                     <p class="card-text">Masajeador Facial Q, Crema Para Eliminar Arrugas Y Estiramie.</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+             </div>
+           </div>
+           <div class="col">
+            <div class="card">
+               <a class="text-decoration-none text-dark" href="cuidadofacial3.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_886087-MCO75457116304_042024-AB.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h4 class="card-title mt-0">$4.559.000</h4>
+                     <p class="card-text">Skindion Rejuvenecimiento Facial Microcorriente Antiarrugas</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+               <a class="text-decoration-none text-dark" href="cuidadofacial4.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_964175-MCO49334906815_032022-T.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h4 class="card-title mt-0">$34.377</h4>
+                     <p class="card-text">Globos De Hielo Cara - Facial.</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+            </div>
+          </div>
+          <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="cuidadofacial5.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_785721-MCO53895965668_022023-AB.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h4 class="card-title mt-0">$27.195</h4>
+                     <p class="card-text">Molde Facial Silicona Hielo.</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="cuidadofacial6.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_943690-MCO54915176539_042023-T.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h4 class="card-title mt-0">$27.900</h4>
+                     <p class="card-text">Rodillo De Jade Piedra Y Guasha.</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="cuidadofacial2.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_822113-CBT73787747836_012024-AB.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h4 class="card-title mt-0">$62.653</h4>
+                     <p class="card-text">Dispositivo De Estiramiento Facial De Microcorriente Usb En.</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="maquillajelabios1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_658958-MLA74805955569_022024-E.webp
+                   " class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h2 class="card-title mt-0">$63.267</h2>
+                     <p class="card-text">Labial Super Stay Vinyl Ink Charmed x 4.2ml</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="maquillajelabios3.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_803398-MLU75297910533_032024-AB.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h4 class="card-title mt-0">$37.900</h4>
+                     <p class="card-text">Sheglam Hot Goss Plumping Lip Gloss-that's Juicy! Color Transparente</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="maquillajecara1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_811014-MLU77602245982_072024-E.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$44.633</h4>
+                   <p class="card-text">Corrector Instant Age Rewind Eraser Dark circles 130 Medium x 6ml.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="maquillajecara3.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_675266-MLU76066083803_042024-AB.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$187.000</h4>
+                   <p class="card-text">Rare Beauty - Soft Pinch Luminous Powder Blush - Sephora Usa Tono Del Maquillaje Hope - Nude Mauve</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+               </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="maquillajeojos1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_603693-MCO41983763615_052020-E.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h4 class="card-title mt-0">$22.078</h4>
+                     <p class="card-text">Essence Paleta Sombras The Rose Edition - g</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="maquillajeojos2.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_808707-MCO70498966315_072023-AB.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h4 class="card-title mt-0">$59.900</h4>
+                     <p class="card-text">Paleta De Sombras Con Iluminador Romantic - g</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="maquillajecara2.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_783020-MCO48161669032_112021-E.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h2 class="card-title mt-0">$64.141</h2>
+                     <p class="card-text">Base Miracle Touch Max Factor</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="maquillajelabios2.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_871450-MCO68946849430_042023-E.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h2 class="card-title mt-0">$40.712</h2>
+                     <p class="card-text">Labial Outlast Color & Gloss Covergirl Natural Blush Covergi</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+            <div class="card">
+               <a class="text-decoration-none text-dark" href="lavadora1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_696933-MLA49632731098_042022-T.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$1.789.900</h4>
+                   <p class="card-text">Lavadora Whirlpool Superior 19kgs Smart Action Y Panel Digit Color Gris oscuro 120V.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+             </div>
+           </div>
+           <div class="col">
+            <div class="card">
+               <a class="text-decoration-none text-dark" href="licuadora1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_823049-MLA69220505376_052023-AD.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$97.500</h4>
+                   <p class="card-text">Licuadora Imusa Powermix Glass 1,25 L blanca con vaso de vidrio 110V - 120V.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+               <a class="text-decoration-none text-dark" href="cafetera2.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_838049-MLU74966342469_032024-T.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h4 class="card-title mt-0">$269.900</h4>
+                     <p class="card-text">Capuchinera Cafetera Espresso + Capuccino Home Elements HECM2033 Color Negro 120V.</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+            </div>
+          </div>
+          <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="plancha1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_775677-MCO54229671183_032023-T.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$45.000</h4>
+                   <p class="card-text">Plancha Viajera Para Ropa Antiadherente Vapor Spray Y Seca.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="freidora1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_851512-MLU75227486477_032024-W.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$218.900</h4>
+                   <p class="card-text">Freidora De Aire Oster Bioceramic Sin Aceite 4lt Air Fryer Color Negro 110V.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="sandwichera1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_623983-MLU74360387131_022024-W.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h6 class="subtitle mb-0 text-danger">$250.000</h6>
+                   <h2 class="card-title mt-0">$175.562</h2>
+                   <p class="card-text">Sanduchera Asador Panini Imusa Grill 180.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="microondas1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_620367-MLA52122750570_102022-T.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$454.935</h4>
+                   <p class="card-text">Microondas Shine Con Dorador Con Esmalte Cerámico, 23 L.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="batidora1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_827095-MLU73291197292_122023-T.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$60.001</h4>
+                   <p class="card-text">Batidora Electrica De Mano 120w 5 Velocidades 2 Batidores Color Blanco Frecuencia 60Hz 110V.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="aire1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_844793-MLU75210016528_032024-T.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$1.349.900</h4>
+                   <p class="card-text">Aire Acondicionado Convencional 220 V 12000 Btus Blanco Mabe 220V.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="estufa1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_897575-MCO76457099858_052024-T.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$1.299.900</h4>
+                   <p class="card-text">Estufa De Inducción 4 Puestos Empotrable 4x900w 9 Niveles.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="abanico1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_613822-MLU75748285673_042024-T.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$196.990</h4>
+                   <p class="card-text">Ventilador Altezza Pedestal 18'' Malla Plastica Negro Pro.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="nevera1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_891246-MLA70107415669_062023-AB.webp" class="card-img-top" alt="...">
+                     <div class="card-body">
+                       <h4 class="card-title mt-0">$1.639.203</h4>
+                       <p class="card-text">Nevera No Frost 267 Lts Brutos Black Steel Mabe Rma267fycc 115V.</p>
+                       <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="abanico2.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_755050-MLU75618933425_042024-AB.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h2 class="card-title mt-0">$170.275</h2>
+                     <p class="card-text">Ventilador Altezza Pro Pared 18'' Malla Plastica Blanco 110V</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="abanico3.html">
+                   <img src="	https://http2.mlstatic.com/D_Q_NP_929098-MLU78459318614_082024-AB.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h4 class="card-title mt-0">$139.900</h4>
+                     <p class="card-text">Ventilador Samurai Air Maxx Blanco Con Azul 5861032052</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="aire2.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_611929-MLU78868802253_092024-AB.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h2 class="card-title mt-0">$1.199.900</h2>
+                     <p class="card-text">Aire Acondicionado On/off 9000btu 110v Color Blanco 115V</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="aire3.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_866669-MLA74695498622_022024-AB.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h4 class="card-title mt-0">$2.272.200</h4>
+                     <p class="card-text">Lavadora Whirlpool Automatica De 18kg Gris - Wwg18bshla Whir 110V - 127V</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="aire1.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_2X_844793-MLU75210016528_032024-T.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$1.349.900</h4>
+                   <p class="card-text">Aire Acondicionado Convencional 220 V 12000 Btus Blanco Mabe 220V.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="batidora2.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_697073-MLA45739527458_042021-AB.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h2 class="card-title mt-0">$73.999</h2>
+                     <p class="card-text">Batidora Home Elements HE-1459N Eléctrica De 5 Velocidades Color Negro</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="licuadora3.html">
+                   <img src="	https://http2.mlstatic.com/D_Q_NP_918794-MLU72830827523_112023-AB.webp" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h4 class="card-title mt-0">$362.708</h4>
+                     <p class="card-text">Licuadora Ninja Professional Blender 1000 BL610 2.1 L negra y plata 120V</p>
+                     <p class="card-text envio">Envío Gratis</p>
+                   </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+               <a class="text-decoration-none text-dark" href="batidora3.html">
+                   <img src="https://http2.mlstatic.com/D_Q_NP_924216-MLU72647314899_112023-AB.webp" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h4 class="card-title mt-0">$132.905/h4>
+                   <p class="card-text">Batidora 3 En 1, Manual Pedestal E Inmersion Home Elements Color Negro 120V.</p>
+                   <p class="card-text envio">Envío Gratis</p>
+                 </div>
+                 </a>
+           </div>
+         </div>
+         <div class="col">
+            <div class="card">
+              <img src="https://http2.mlstatic.com/D_Q_NP_930517-MLU76301267818_052024-W.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">$328.900</h5>
+                <p class="card-text">Carpa Toldo 3x3 Paredes Plegable Impermeable Playa Jardin</p>
+               </div>
+             </div>
+           </div>
+           <div class="col">
+            <div class="card">
+              <img src="https://http2.mlstatic.com/D_Q_NP_870725-MLU72351856906_102023-W.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">$192.900</h5>
+                <p class="card-text">Escritorio RTA Muebles Astana madera aglomerada de 120cm x 73.5cm x 50cm</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">$75.156</h5>
+                <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+           <div class="card">
+             <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">$75.156</h5>
+               <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">$75.156</h5>
+               <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">$75.156</h5>
+               <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">$75.156</h5>
+               <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">$75.156</h5>
+               <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">$75.156</h5>
+               <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">$75.156</h5>
+               <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">$75.156</h5>
+               <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">$75.156</h5>
+               <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">$75.156</h5>
+               <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">$75.156</h5>
+               <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <img src="https://http2.mlstatic.com/D_Q_NP_659734-MLU74423654384_022024-W.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h5 class="card-title">$75.156</h5>
+               <p class="card-text">Gel Limpiador Espumoso CeraVe para piel normal a grasa</p>
+             </div>
+           </div>
+         </div>
+         <div class="col">
+            <div class="card">
+             <a class="text-decoration-none text-dark" href="moda1.html">
+               <img src="https://http2.mlstatic.com/D_Q_NP_894997-MCO76715319181_052024-AB.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h4 class="card-title mt-0">$94.500</h4>
+               <p class="card-text">Vestido Largo Mujer Estampado Rutta 92689.</p>
+               <p class="card-text envio">Envío Gratis</p>
+             </div>
+             </a>
+             </div>
+           </div>
+           <div class="col">
+            <div class="card">
+             <a class="text-decoration-none text-dark" href="moda2.html">
+               <img src="https://http2.mlstatic.com/D_Q_NP_749105-MCO76654678369_052024-AB.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h4 class="card-title mt-0">$47.300</h4>
+               <p class="card-text">Vestido Mujer Verde Botella Atypical 86060.</p>
+               <p class="card-text envio">Envío Gratis</p>
+             </div>
+             </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+             <a class="text-decoration-none text-dark" href="moda3.html">
+               <img src="https://http2.mlstatic.com/D_Q_NP_857009-MCO76403522762_052024-AB.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h4 class="card-title mt-0">$47.300</h4>
+               <p class="card-text">Vestido Corto Mujer Palo De Rosa Mp 5296.</p>
+               <p class="card-text envio">Envío Gratis</p>
+             </div>
+             </a>
+            </div>
+          </div>
+          <div class="col">
+           <div class="card">
+             <a class="text-decoration-none text-dark" href="moda4.html">
+               <img src="https://http2.mlstatic.com/D_Q_NP_2X_847697-MCO74157464893_012024-E.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h4 class="card-title mt-0">$39.800</h4>
+               <p class="card-text">Camibuso Manga Larga En Licra Para Deportes Y Natacion.</p>
+               <p class="card-text envio">Envío Gratis</p>
+             </div>
+             </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <a class="text-decoration-none text-dark" href="moda5.html">
+               <img src="https://http2.mlstatic.com/D_Q_NP_2X_709197-MCO51852200210_102022-E.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h4 class="card-title mt-0">$224.990</h4>
+               <p class="card-text">Camiseta Esqueleto Nike Dri-fit Training Hombre-negro.</p>
+               <p class="card-text envio">Envío Gratis</p>
+             </div>
+             </a>
+           </div>
+         </div>
+         <div class="col">
+           <div class="card">
+             <a class="text-decoration-none text-dark" href="moda6.html">
+               <img src="https://http2.mlstatic.com/D_Q_NP_833064-MCO51457780458_092022-AB.webp" class="card-img-top" alt="...">
+             <div class="card-body">
+               <h4 class="card-title mt-0">$139.900</h4>
+               <p class="card-text">Camiseta Nike Dri-fit Para Hombre-negro.</p>
+               <p class="card-text envio">Envío Gratis</p>
+             </div>
+             </a>
+           </div>
+         </div>
+        </div>
+        
+     </section>
+  </div>
+
+  <button class="vermas"><a class="text-decoration-none text-dark" href="detodo.html">VER MÁS</a></button>
+
+  <footer class="bg-dark text-light mt-5">
+
+    <table class="table table-dark table-borderless text-center">
+      <br>
+      <tr>
+        <th>Gana Dinero con Nosotros</th>
+        <th>Sobre Nosotros</th>
+        <th>Ayuda</th>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Vender productos en Flash-e</a></td>
+        <td><a href="#" class="pie">Terminos & Condiciones</a></td>
+        <td><a href="#" class="pie">Contactanos</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie"> Programa de Referidos</a></td>
+        <td><a href="#" class="pie"> Privacidad de Datos</a></td>
+        <td><a href="#" class="pie">Problemas con tu Pago</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Anuncia tus Productos</a></td>
+        <td><a href="#" class="pie">Preguntas Frecuentes</a></td>
+        <td><a href="#" class="pie">Denuncia Fraude</a></td>
+      </tr>
+    </table>
+    
+    <div class="ms-5 me-5">
+      <table class="table  text-center">
+        <h2 class="text-center mb-0">Metodos de Pago</h2>
+        <tr>
+          <th>VISA</th>
+          <th>MASTERCARD</th>
+          <th>AMERICAN EXPRESS</th>
+        </tr>
+        <tr class="table-borderless">
+          <td class="mb-0"><img style="width: 60px;" src="./img/visa.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/mastercard.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/amex.png"></td>
+        </tr>
+      </table>
+    </div>
+    <p class="text-end me-3" style="font-size: smaller;">© 2024 Flashe.com</p>
+      </div>
+        
+    </div>
+  </footer>
+</body>
+<script src="./js/java.js"></script>
+</html>
