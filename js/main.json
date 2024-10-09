@@ -1,0 +1,39 @@
+
+{
+    "data":
+    [
+        {"nombre": "ABANICO"},
+        {"nombre": "ACCESORIOS"},
+        {"nombre": "AIRE"},
+        {"nombre": "BATIDORA"},
+        {"nombre": "BELLEZA"},
+        {"nombre": "CAFETERA"},
+        {"nombre": "CAMARA"},
+        {"nombre": "CELULAR"},
+        {"nombre": "COLCHONES"},
+        {"nombre": "CUIDADOFACIAL"},
+        {"nombre": "ELECTRODOMESTICO"},
+        {"nombre": "ESCAPARATE"},
+        {"nombre": "ESCRITORIO"},
+        {"nombre": "ESTUFA"},
+        {"nombre": "FREIDORA"},
+        {"nombre": "HERRAMIENTAS"},
+        {"nombre": "LAMPARA"},
+        {"nombre": "LAVADORA"},
+        {"nombre": "LICUADORA"},
+        {"nombre": "MAQUILLAJE"},
+        {"nombre": "MICROONDAS"},
+        {"nombre": "MODA"},
+        {"nombre": "MONITOR"},
+        {"nombre": "NEVERA"},
+        {"nombre": "PLANCHA"},
+        {"nombre": "PORTATIL"},
+        {"nombre": "RELOJ"},
+        {"nombre": "SANDWICHERA"},
+        {"nombre": "SECADOR"},
+        {"nombre": "SILLA"},
+        {"nombre": "SOFACAMA"},
+        {"nombre": "TAPETE"}
+    ]
+}
+

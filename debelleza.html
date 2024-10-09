@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/oferta.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body class="bg-body-tertiary">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/logo_op2.png" alt="" class="logo_img"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn bg-warning-subtle rounded-0">Todo</button>
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn bg-warning-subtle dropdown-toggle rounded-0 p-1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="#">Todas las categorías</a>
+                <a class="dropdown-item" href="moda.html">Moda</a>
+                <a class="dropdown-item" href="#">Accesorios</a>
+                <a class="dropdown-item" href="#">Calzado</a>
+                <a class="dropdown-item" href="#">Hogar</a>
+                <a class="dropdown-item" href="Electrodomesticos.html">Electrodomesticos</a>
+                <a class="dropdown-item" href="#">Belleza</a>
+                <a class="dropdown-item" href="#">Cuidado Personal</a>
+              </div>
+            </div>
+          </div>
+          <form class="d-flex">
+            <input class="form-control rounded-0 busqueda" type="search" placeholder="¿Que estas buscando?">
+            <button class="btn bg-secondary-subtle my-2 my-sm-0 rounded-0" type="submit"><img src="img/lupa.png" class="lupa" ></button>
+          </form>
+
+        </div>
+        <div class="collapse navbar-collapse lista justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li id="registrate" class="nav-item dropdown">
+                <button  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Registrate</button>
+                <ul class="dropdown-menu dropdown-menu-dark" id="inicioseccion" style="display: none;">
+                  <li>
+                    <a class="dropdown-item" href="contacto.html"> Crear mi Cuenta</a></li>
+                  <li>
+                    <a id="iniciarseccion" class="dropdown-item" href="inicioseccion.html"> Inicia Sección </a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Categorias</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Tegnologia </a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="#">Celulares</a></li>
+                        <li><a class="dropdown-item" href="#">Computación</a></li>
+                        <li><a class="dropdown-item" href="#">Electrónica/Audio/Video</a></li>
+                        <li><a class="dropdown-item" href="#">Consolas/Videojuegos</a></li>
+                        <li><a class="dropdown-item" href="#">Televisores</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Hogar</a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="#">Cocina/comedor</a></li>
+                        <li><a class="dropdown-item" href="#">Muebles/Sala</a></li>
+                        <li><a class="dropdown-item" href="#">Dormitorio</a></li>
+                        <li><a class="dropdown-item" href="#">Baños</a></li>
+                        <li><a class="dropdown-item" href="#">oficina en casa</a></li>
+                        <li><a class="dropdown-item" href="#">Inteligente</a></li>
+                        <li><a class="dropdown-item" href="#">ElectroHogar</a></li>
+                        <li><a class="dropdown-item" href="#">Herramientas</a></li>
+                        <li><a class="dropdown-item" href="#">Seguridad para el Hogar</a></li>
+                        <li><a class="dropdown-item" href="#">Ver Mas</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Moda</a>
+                      <ul class="dropdown-menu submenu submenu-left dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Mujer</a></li>
+                        <li><a class="dropdown-item" href="#">Hombre</a></li>
+                        <li><a class="dropdown-item" href="#">Niños</a></li>
+                        <li><a class="dropdown-item" href="#">Bebés</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Accesorios</a>
+                      <ul class="dropdown-menu submenu submenu-left dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Bisutería</a></li>
+                        <li><a class="dropdown-item" href="#">Bolsos</a></li>
+                        <li><a class="dropdown-item" href="#">Zapatos</a></li>
+                        <li><a class="dropdown-item" href="#">Joyería</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Belleza</a>
+                      <ul class="dropdown-menu submenu submenu-left dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Maquillaje</a></li>
+                        <li><a class="dropdown-item" href="#">Electrobelleza</a></li>
+                        <li><a class="dropdown-item" href="#">Pelucas</a></li>
+                        <li><a class="dropdown-item" href="#">Cuidado de Uñas</a></li>
+                        <li><a class="dropdown-item" href="#">Cuidado Capilar</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Cuidado Personal</a>
+                      <ul class="dropdown-menu submenu submenu-left dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Cuidado de la Piel</a></li>
+                        <li><a class="dropdown-item" href="#">SkinCare</a></li>
+                        <li><a class="dropdown-item" href="#">Higiene Personal</a></li>
+                        <li><a class="dropdown-item" href="#">Ver Mas</a></li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+            
+            <button class="btn" type="button"><img class="carrito" src="./img/pngwing.com (1).png" ></button>
+          </div>
+          
+      </div>
+  </nav>
+  </header>
+
+  <div class="d-flex ms-4 mt-5" >
+    <form>
+      <div class="mb-4">
+        <h5>Todo</h5>
+      <p>20 productos</p>
+      <div class="form-check form-switch">
+       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+       <label class="form-check-label" for="flexSwitchCheckDefault">Oferta Relampago</label>
+     </div>
+     <div class="form-check form-switch">
+       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+       <label class="form-check-label" for="flexSwitchCheckChecked">Envío Turbo</label>
+     </div>
+     <div class="form-check form-switch">
+       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+       <label class="form-check-label" for="flexSwitchCheckDefault">Oferta del Día</label>
+     </div>
+      </div>
+   
+     <div class="mb-4">
+       <ul>
+         <li><h5>Categorías</h5></li>
+         <li>Electrobelleza</li>
+         <li>Maquillaje</li>
+         <li>Cuidado de la Piel</li>
+         <li>Skin Care</li>
+       </ul>
+     </div>
+   
+     <div class="mb-4">
+       <ul>
+         <li>Envío Gratis</li>
+       </ul>
+     </div>
+   
+     <div>
+       <ul>
+         <li><h5>Precio</h5></li>
+         <li>Hasta $50.000</li>
+         <li>$50.000 a $150.000</li>
+         <li>Más de $150.000</li>
+       </ul>
+       <div class=" d-flex me-3 align-items-center">
+        <p class="m-2">5.000</p>
+       <label for="customRange1" class="form-label "></label>
+       <input type="range" class="form-range" id="customRange1">
+       <p class="m-2">5.000.000</p>
+      </div>
+     </div>
+     </form>
+     
+     <section class="cuerpo">
+       <div class="row row-cols-1 row-cols-md-3 g-4">
+           <div class="col">
+             <div class="card">
+                <a class="text-decoration-none text-dark" href="cuidadofacial1.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_972506-CBT75275068600_032024-P.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h6 class="subtitle mb-0 text-danger">$50.123</h6>
+                      <h2 class="card-title mt-0">$36.297</h2>
+                      <p class="card-text">Masajeador Facial Q, Crema Para Eliminar Arrugas Y Estiramie.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+              </div>
+            </div>
+            <div class="col">
+             <div class="card">
+                <a class="text-decoration-none text-dark" href="cuidadofacial3.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_886087-MCO75457116304_042024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$4.559.000</h4>
+                      <p class="card-text">Skindion Rejuvenecimiento Facial Microcorriente Antiarrugas</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+             </div>
+           </div>
+           <div class="col">
+             <div class="card">
+                <a class="text-decoration-none text-dark" href="cuidadofacial4.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_964175-MCO49334906815_032022-T.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$34.377</h4>
+                      <p class="card-text">Globos De Hielo Cara - Facial.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+             </div>
+           </div>
+           <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="cuidadofacial5.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_785721-MCO53895965668_022023-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$27.195</h4>
+                      <p class="card-text">Molde Facial Silicona Hielo.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="cuidadofacial6.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_943690-MCO54915176539_042023-T.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$27.900</h4>
+                      <p class="card-text">Rodillo De Jade Piedra Y Guasha.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="cuidadofacial2.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_822113-CBT73787747836_012024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$62.653</h4>
+                      <p class="card-text">Dispositivo De Estiramiento Facial De Microcorriente Usb En.</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="maquillajelabios1.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_658958-MLA74805955569_022024-E.webp
+                    " class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h2 class="card-title mt-0">$63.267</h2>
+                      <p class="card-text">Labial Super Stay Vinyl Ink Charmed x 4.2ml</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="maquillajelabios3.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_803398-MLU75297910533_032024-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$37.900</h4>
+                      <p class="card-text">Sheglam Hot Goss Plumping Lip Gloss-that's Juicy! Color Transparente</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="maquillajecara1.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_811014-MLU77602245982_072024-E.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title mt-0">$44.633</h4>
+                    <p class="card-text">Corrector Instant Age Rewind Eraser Dark circles 130 Medium x 6ml.</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="maquillajecara3.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_675266-MLU76066083803_042024-AB.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title mt-0">$187.000</h4>
+                    <p class="card-text">Rare Beauty - Soft Pinch Luminous Powder Blush - Sephora Usa Tono Del Maquillaje Hope - Nude Mauve</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="maquillajeojos1.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_603693-MCO41983763615_052020-E.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$22.078</h4>
+                      <p class="card-text">Essence Paleta Sombras The Rose Edition - g</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="maquillajeojos2.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_808707-MCO70498966315_072023-AB.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title mt-0">$59.900</h4>
+                      <p class="card-text">Paleta De Sombras Con Iluminador Romantic - g</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="maquillajecara2.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_783020-MCO48161669032_112021-E.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h2 class="card-title mt-0">$64.141</h2>
+                      <p class="card-text">Base Miracle Touch Max Factor</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+                <a class="text-decoration-none text-dark" href="maquillajelabios2.html">
+                    <img src="https://http2.mlstatic.com/D_Q_NP_2X_871450-MCO68946849430_042023-E.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h2 class="card-title mt-0">$40.712</h2>
+                      <p class="card-text">Labial Outlast Color & Gloss Covergirl Natural Blush Covergi</p>
+                      <p class="card-text envio">Envío Gratis</p>
+                    </div>
+                  </a>
+            </div>
+          </div>
+              
+        </div>
+        
+     </section>
+  </div>
+
+  <button class="vermas"><a class="text-decoration-none text-dark" href="detodo.html">VER MÁS</a></button>
+
+  <footer class="bg-dark text-light mt-5">
+
+    <table class="table table-dark table-borderless text-center">
+      <br>
+      <tr>
+        <th>Gana Dinero con Nosotros</th>
+        <th>Sobre Nosotros</th>
+        <th>Ayuda</th>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Vender productos en Flash-e</a></td>
+        <td><a href="#" class="pie">Terminos & Condiciones</a></td>
+        <td><a href="#" class="pie">Contactanos</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie"> Programa de Referidos</a></td>
+        <td><a href="#" class="pie"> Privacidad de Datos</a></td>
+        <td><a href="#" class="pie">Problemas con tu Pago</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Anuncia tus Productos</a></td>
+        <td><a href="#" class="pie">Preguntas Frecuentes</a></td>
+        <td><a href="#" class="pie">Denuncia Fraude</a></td>
+      </tr>
+    </table>
+    
+    <div class="ms-5 me-5">
+      <table class="table  text-center">
+        <h2 class="text-center mb-0">Metodos de Pago</h2>
+        <tr>
+          <th>VISA</th>
+          <th>MASTERCARD</th>
+          <th>AMERICAN EXPRESS</th>
+        </tr>
+        <tr class="table-borderless">
+          <td class="mb-0"><img style="width: 60px;" src="./img/visa.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/mastercard.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/amex.png"></td>
+        </tr>
+      </table>
+    </div>
+    <p class="text-end me-3" style="font-size: smaller;">© 2024 Flashe.com</p>
+      </div>
+        
+    </div>
+  </footer>
+</body>
+<script src="./js/java.js"></script>
+</html>
