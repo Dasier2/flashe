@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body class="bg-body-tertiary">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/logo_op2.png" alt="" class="logo_img"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn bg-warning-subtle rounded-0">Todo</button>
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn bg-warning-subtle dropdown-toggle rounded-0 p-1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="moda.html">Moda</a>
+                <a class="dropdown-item" href="accesorios.html">Accesorios</a>
+                <a class="dropdown-item" href="hogar.html">Hogar</a>
+                <a class="dropdown-item" href="Electrodomesticos.html">Electrodomesticos</a>
+                <a class="dropdown-item" href="belleza.html">Belleza</a>
+              </div>
+            </div>
+          </div>
+          <form >
+            <div class="mt-3 d-flex bloque">
+              <input class="form-control rounded-0 busqueda" type="search" id="miInput" placeholder="¿Que estas buscando?">
+              <button class="btn bg-secondary-subtle my-2 my-sm-0 rounded-0" ><img src="img/lupa.png" id="miBoton" class="lupa" ></button>
+            </div>
+            <div class="bloque">
+              <ul id="miListado"></ul>
+            </div>
+          </form>
+          
+        </div>
+        <div class="collapse navbar-collapse lista justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li id="registrate" class="nav-item dropdown">
+              <button  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Registrate</button>
+              <ul class="dropdown-menu dropdown-menu-dark" id="inicioseccion" style="display: none;">
+                  <li><a class="dropdown-item" href="crearCuenta.html"> Crear mi Cuenta</a></li>
+                  <li><a id="iniciarseccion" class="dropdown-item" href="inicioseccion.html"> Inicia Sección </a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Categorias</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Tegnologia </a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="detecnologia.html">Celulares</a></li>
+                        <li><a class="dropdown-item" href="detecnologia.html">Computación</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Hogar</a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="hogar.html ">Muebles/Sala</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Dormitorio</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">oficina en casa</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Herramientas</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Seguridad para el Hogar</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Ver Mas</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Moda</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="moda.html">Mujer</a></li>
+                        <li><a class="dropdown-item" href="moda.html">Hombre</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Belleza</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="belleza.html">Maquillaje</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Electrobelleza</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Cuidado Personal</a></li>
+                      </ul>
+                    </li>
+                </ul>
+            </li>
+          </ul>
+            
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    ...
+  </div>
+</div>
+          <!--<div class="container-icon">
+              <div class="container-cart-icon">
+                
+                <img class="icon-cart carrito" src="./img/pngwing.com (1).png">
+               
+                <div class="count-products">
+                  <span id="contador-productos">0</span>
+                </div>
+              </div>
+
+              <div class="container-cart-products hidden-cart">
+                <div class="row-product hidden">
+                    <div class="cart-product">
+                      <div class="info-cart-product">
+                        <span class="cantidad-producto-carrito">1</span>
+                        <p class="titulo-producto-carrito">Portátil</p>
+                        <span class="precio-producto-carrito">$1.849.900</span>
+                      </div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+								        fill="none"
+								        viewBox="0 0 24 24"
+								        stroke-width="1.5"
+			 					        stroke="currentColor"
+								        class="icon-close">
+
+								        <path
+									        stroke-linecap="round"
+									        stroke-linejoin="round"
+									        d="M6 18L18 6M6 6l12 12"/>
+							        </svg>
+                    </div>
+                </div>
+
+                <div class="cart-total hidden">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$200</span>
+                </div>
+                <p class="cart-empty">El carrito está vacío</p>
+              </div>
+          </div>-->
+        </div>
+      </div>
+  </nav>
+  </header>
+
+  <section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 ">
+      <button class="ubicacion border-0  ms-4">
+      <select class="ubicacion bg-body-tertiary border-0 text-center">
+        <option>Ingresa Tu cuidad</option>
+        <option>Bogotá</option>
+        <option>Cartagena</option>
+        <option>Medellín</option>
+        <option>Santa Marta</option>
+        <option>Valledupar</option>
+        <option>barranquilla</option>
+      </select>
+      </button>
+
+      
+
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link oferta" href="ofertas.html">OFERTAS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">CENTRO DE AYUDA</a>
+              <ul class="dropdown-menu dropdown-menu-tertiary">
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con tu pedido</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el sitio web</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el vendedor</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Otros</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a id="rastreoPedido" class="nav-link" href="rastreo.html">RASTREA TU PEDIDO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="https://http2.mlstatic.com/D_NQ_620839-MLA78042304333_072024-OO.webp" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="https://http2.mlstatic.com/D_NQ_853274-MLA78042702805_072024-OO.webp" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://http2.mlstatic.com/D_NQ_845275-MLA78042867179_072024-OO.webp" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://http2.mlstatic.com/D_NQ_756055-MLA78042240127_072024-OO.webp" class="d-block w-100" alt="...">
+      </div>
+      
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="m-5">
+    <a class="text-decoration-none text-dark" href="ofertas.html"><h2>OFERTAS</h2></a>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card-group ">
+            <div class="card border-end-0 pt-2">
+              <a class="text-decoration-none text-dark" href="portatil1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_982426-MCO73285077813_122023-W.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="subtitle mb-0 text-danger">$4.000.000</h6>
+                <h2 class="card-title mt-0">$1.849.900</h2>
+                <p class="card-text">Portátil Lenovo Ideapad Slim 3 Intel Ci 5 8gb 512gb Touch.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-2">
+              <a class="text-decoration-none text-dark" href="reloj1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_733580-MLA72063241888_102023-W.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="subtitle mb-0 text-danger">$1.730.000</h6>
+                  <h2 class="card-title mt-0">$1.659.900</h2>
+                  <p class="card-text">Apple Watch Series 9 GPS • Caja de aluminio color medianoche de 45 mm.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-2">
+              <a class="text-decoration-none text-dark" href="monitor1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_641120-MLA73977340632_012024-W.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="subtitle mb-0 text-danger">$930.000</h6>
+                <h2 class="card-title mt-0">$759.000</h2>
+                <p class="card-text">Monitor LG 27SR50F 27" IPS Full HD, Blanco, Bivolt 110V/220V.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-2">
+              <a class="text-decoration-none text-dark" href="celular1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_912227-MLA71782903150_092023-W.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="subtitle mb-0 text-danger">$6.673.750</h6>
+                <h2 class="card-title mt-0">$4.869.900</h2>
+                <p class="card-text">Apple iPhone 15 Pro Max (256 GB) - Titanio Azul.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-2">
+              <a class="text-decoration-none text-dark" href="freidora1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_851512-MLU75227486477_032024-W.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="subtitle mb-0 text-danger">$309.000</h6>
+                <h2 class="card-title mt-0">$218.900</h2>
+                <p class="card-text">Freidora De Aire Oster Bioceramic Sin Aceite 4lt Air Fryer Color Negro 110V.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card pt-2">
+              <a class="text-decoration-none text-dark" href="silla1.html">
+                <img src="	https://http2.mlstatic.com/D_Q_NP_998049-MLU76750641059_052024-AB.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="subtitle mb-0 text-danger">$659.800</h6>
+                  <h2 class="card-title mt-0">$299.900</h2>
+                  <p class="card-text">Kit X 2 Sillas Magnux Para Oficina Escritorio Ergonómica.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card-group ">
+            <div class="card border-end-0 pt-2">
+              <a class="text-decoration-none text-dark" href="escaparate1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_898781-MLA75092415874_032024-W.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="subtitle mb-0 text-danger">$423.000</h6>
+                <h2 class="card-title mt-0">$245.000</h2>
+                <p class="card-text">Rta Desing BRB 3204 biblioteca Bellagio Alto color rovere 101x60cm.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-2">
+              <a class="text-decoration-none text-dark" href="cuidadofacial1.html">
+              <img src="https://http2.mlstatic.com/D_Q_NP_972506-CBT75275068600_032024-P.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="subtitle mb-0 text-danger">$50.123</h6>
+                <h2 class="card-title mt-0">$36.297</h2>
+                <p class="card-text">Masajeador Facial Q, Crema Para Eliminar Arrugas Y Estiramie.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+            </a>
+            </div>
+            <div class="card border-end-0 pt-2">
+              <a class="text-decoration-none text-dark" href="herramientas1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_962053-MLU75771544668_042024-AB.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h2 class="card-title mt-0">$66.680</h2>
+                <p class="card-text">Kit Set De Herramientas De 27 Piezas Con Estuche Sin Marca.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-2">
+              <a class="text-decoration-none text-dark" href="accesoriovehiculo1.html">
+              <img src="https://http2.mlstatic.com/D_Q_NP_763496-MLU75947534619_042024-AB.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="subtitle mb-0 text-danger">$75.000</h6>
+                <h2 class="card-title mt-0">$377.800</h2>
+                <p class="card-text">Kit de 2 llantas Compasal Blazer HP P 185/65R15 88 H</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+            </a>
+            </div>
+            <div class="card border-end-0 pt-2">
+              <a class="text-decoration-none text-dark" href="escritorio1.html">
+              <img src="https://http2.mlstatic.com/D_Q_NP_2X_971108-MCO48186728033_112021-T.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="subtitle mb-0 text-danger">$607.900</h6>
+                <h2 class="card-title mt-0">$389.900</h2>
+                <p class="card-text">Escritorio Axis, Café Claro.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+            </a>
+            </div>
+            <div class="card pt-2">
+              <a class="text-decoration-none text-dark" href="sandwichera1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_623983-MLU74360387131_022024-W.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="subtitle mb-0 text-danger">$250.000</h6>
+                <h2 class="card-title mt-0">$175.562</h2>
+                <p class="card-text">Sanduchera Asador Panini Imusa Grill 180.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div> 
+      </div>
+      <button class="botoni carousel-control-prev justify-content-start" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class=" flecha" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+        </svg></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="botond carousel-control-next justify-content-end" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class=" flecha" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+        </svg></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  
+  <div class="m-5">
+    <a class="text-decoration-none text-dark" href="Electrodomesticos.html"><h3>ELECTRODOMÉSTICOS</h3></a>
+    <div id="carouselExample2" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card-group ">
+            <div class="card border-end-0 p-3">
+              <a class="text-decoration-none text-dark" href="lavadora1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_696933-MLA49632731098_042022-T.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$1.789.900</h4>
+                <p class="card-text">Lavadora Whirlpool Superior 19kgs Smart Action Y Panel Digit Color Gris oscuro 120V.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-2">
+              <a class="text-decoration-none text-dark" href="licuadora1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_823049-MLA69220505376_052023-AD.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$97.500</h4>
+                <p class="card-text">Licuadora Imusa Powermix Glass 1,25 L blanca con vaso de vidrio 110V - 120V.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-3">
+              <a class="text-decoration-none text-dark" href="cafetera2.html">
+              <img src="https://http2.mlstatic.com/D_Q_NP_2X_838049-MLU74966342469_032024-T.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$269.900</h4>
+                <p class="card-text">Capuchinera Cafetera Espresso + Capuccino Home Elements HECM2033 Color Negro 120V.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+            </a>
+            </div>
+            <div class="card border-end-0 pt-3">
+              <a class="text-decoration-none text-dark" href="plancha1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_775677-MCO54229671183_032023-T.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$45.000</h4>
+                <p class="card-text">Plancha Viajera Para Ropa Antiadherente Vapor Spray Y Seca.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-3">
+              <a class="text-decoration-none text-dark" href="freidora1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_851512-MLU75227486477_032024-W.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$218.900</h4>
+                <p class="card-text">Freidora De Aire Oster Bioceramic Sin Aceite 4lt Air Fryer Color Negro 110V.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card pt-3">
+              <a class="text-decoration-none text-dark" href="sandwichera1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_623983-MLU74360387131_022024-W.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="subtitle mb-0 text-danger">$250.000</h6>
+                <h2 class="card-title mt-0">$175.562</h2>
+                <p class="card-text">Sanduchera Asador Panini Imusa Grill 180.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card-group ">
+            <div class="card border-end-0 p-3">
+              <a class="text-decoration-none text-dark" href="microondas1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_620367-MLA52122750570_102022-T.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$454.935</h4>
+                <p class="card-text">Microondas Shine Con Dorador Con Esmalte Cerámico, 23 L.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-2">
+              <a class="text-decoration-none text-dark" href="batidora1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_827095-MLU73291197292_122023-T.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$60.001</h4>
+                <p class="card-text">Batidora Electrica De Mano 120w 5 Velocidades 2 Batidores Color Blanco Frecuencia 60Hz 110V.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-3">
+              <a class="text-decoration-none text-dark" href="aire1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_844793-MLU75210016528_032024-T.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$1.349.900</h4>
+                <p class="card-text">Aire Acondicionado Convencional 220 V 12000 Btus Blanco Mabe 220V.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-3">
+              <a class="text-decoration-none text-dark" href="estufa1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_897575-MCO76457099858_052024-T.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$1.299.900</h4>
+                <p class="card-text">Estufa De Inducción 4 Puestos Empotrable 4x900w 9 Niveles.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card border-end-0 pt-3">
+              <a class="text-decoration-none text-dark" href="abanico1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_2X_613822-MLU75748285673_042024-T.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h4 class="card-title mt-0">$196.990</h4>
+                <p class="card-text">Ventilador Altezza Pedestal 18'' Malla Plastica Negro Pro.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+            </div>
+            <div class="card pt-3">
+              <a class="text-decoration-none text-dark" href="nevera1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_891246-MLA70107415669_062023-AB.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title mt-0">$1.639.203</h4>
+                    <p class="card-text">Nevera No Frost 267 Lts Brutos Black Steel Mabe Rma267fycc 115V.</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="botoni carousel-control-prev justify-content-start" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+        <span class=" flecha" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+        </svg></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="botond carousel-control-next justify-content-end" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+        <span class=" flecha" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+        </svg></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+        
+  <div class="m-5">
+      <a class="text-decoration-none text-dark" href="hogar.html"><h3>HOGAR</h3></a>
+      <div id="carouselExample3" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card-group ">
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="camara1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_714963-MLU75357646135_032024-P.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$90.500</h4>
+                  <p class="card-text">Cámara de seguridad Tapo link C200 Ip Wifi Robótica, Full Hd / Audio, Tapo C200 Color Blanco.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="colchones1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_981891-MCO53092144299_122022-T.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$1.051.100</h4>
+                  <p class="card-text">Combo Galaxy+(2) Almohadas Biosoft +protector 140x190 Color Beige/gris.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="escritorio2.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_761235-MLU76398041626_052024-T.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title mt-0">$264.900</h4>
+                    <p class="card-text">Escritorio Tu Home Office 120 Wengue Y Ceniza.</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="silla1.html">
+                  <img src="	https://http2.mlstatic.com/D_Q_NP_998049-MLU76750641059_052024-AB.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6 class="subtitle mb-0 text-danger">$659.800</h6>
+                    <h2 class="card-title mt-0">$299.900</h2>
+                    <p class="card-text">Kit X 2 Sillas Magnux Para Oficina Escritorio Ergonómica.</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="escaparate1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_898781-MLA75092415874_032024-W.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="subtitle mb-0 text-danger">$423.000</h6>
+                  <h2 class="card-title mt-0">$245.000</h2>
+                  <p class="card-text">Rta Desing BRB 3204 biblioteca Bellagio Alto color rovere 101x60cm.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+              <div class="card pt-2">
+                <a class="text-decoration-none text-dark" href="sofacama1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_628333-MLU75458098246_042024-P.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$1.061.100</h4>
+                  <p class="card-text">Sofacama Sion En Tela Patas En Pino.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+          </div>
+          </div>
+          <div class="carousel-item"> 
+            <div class="card-group ">
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="escritorio1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_971108-MCO48186728033_112021-T.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6 class="subtitle mb-0 text-danger">$607.900</h6>
+                    <h2 class="card-title mt-0">$389.900</h2>
+                    <p class="card-text">Escritorio Axis, Café Claro.</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="tapete1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_973065-MCO71009275143_082023-E.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$93.400</h4>
+                  <p class="card-text">Tapete Alfombra Peludo 150 Cm * 200 Cm Colores Decoracion.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="escaparate2.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_602289-MLU75210751500_032024-AB.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title mt-0">$189.900</h4>
+                    <p class="card-text">Mueble Organizador Multiusos.</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="escaparate6.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_850555-MLU73654177779_122023-AB.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title mt-0">$340.900</h4>
+                    <p class="card-text">Biblioteca Noah 175 X 80 X 29 Rta Macadamia Blanco Color Marrón.</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="lampara2.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_969243-MCO69995137694_062023-T.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$101.940</h4>
+                  <p class="card-text">Astronauta Proyector Rgb Led Luces Galaxia Lámpara Parlante.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+              <div class="card pt-2">
+                <a class="text-decoration-none text-dark" href="lampara1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_824478-MCO77526961366_072024-E.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$229.900</h4>
+                  <p class="card-text">Lampara Led De Escritorio Mesa Moderna Oficina.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+          </div>
+          </div>
+        </div>
+        <button class="botoni carousel-control-prev justify-content-start" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+          <span class=" flecha" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+          </svg></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="botond carousel-control-next justify-content-end" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+          <span class=" flecha" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+          </svg></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </div>
+  
+  <div class="m-5">
+      <a class="text-decoration-none text-dark" href="moda.html"><h3>MODA</h3></a>
+      <div id="carouselExample4" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card-group ">
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="moda1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_894997-MCO76715319181_052024-AB.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$94.500</h4>
+                  <p class="card-text">Vestido Largo Mujer Estampado Rutta 92689.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="moda2.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_749105-MCO76654678369_052024-AB.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$47.300</h4>
+                  <p class="card-text">Vestido Mujer Verde Botella Atypical 86060.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="moda3.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_857009-MCO76403522762_052024-AB.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$47.300</h4>
+                  <p class="card-text">Vestido Corto Mujer Palo De Rosa Mp 5296.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="secador1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_656402-MCO49614508443_042022-E.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h2 class="card-title mt-0">$199.900</h2>
+                    <p class="card-text">Cepillo Secador Revlon One-step Hair Dryer And Volumizer</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="electrobelleza1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_740749-MCO70541393865_072023-E.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$319.800</h4>
+                  <p class="card-text">Plancha Para Cabello Profesional En Titanio Cms Cosmos Navi</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+              </div>
+              <div class="card pt-2">
+                <a class="text-decoration-none text-dark" href="maquillajelabios1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_658958-MLA74805955569_022024-E.webp
+                  " class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h2 class="card-title mt-0">$63.267</h2>
+                    <p class="card-text">Labial Super Stay Vinyl Ink Charmed x 4.2ml</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                </a>
+              </div>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div class="card-group ">
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="electrobelleza3.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_798658-MLU78820710779_082024-E.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h4 class="card-title mt-0">$293.900</h4>
+                    <p class="card-text">Recortadora Afeitadora Eléctrica Braun Serie 5 Mgk5280 9en1</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="electrobelleza2.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_774799-MLU72700919277_112023-T.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h2 class="card-title mt-0">$162.700</h2>
+                    <p class="card-text">Plancha Alisadora Remington Frizz Therapy Ambientes Húmedos Color Morado 120V/240V</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="cuidadofacial1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_972506-CBT75275068600_032024-P.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h6 class="subtitle mb-0 text-danger">$50.123</h6>
+                    <h2 class="card-title mt-0">$36.297</h2>
+                    <p class="card-text">Masajeador Facial Q, Crema Para Eliminar Arrugas Y Estiramie.</p>
+                    <p class="card-text envio">Envío Gratis</p>
+                  </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="maquillajecara1.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_811014-MLU77602245982_072024-E.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$44.633</h4>
+                  <p class="card-text">Corrector Instant Age Rewind Eraser Dark circles 130 Medium x 6ml.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+              <div class="card border-end-0 pt-2">
+                <a class="text-decoration-none text-dark" href="moda5.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_2X_709197-MCO51852200210_102022-E.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$224.990</h4>
+                  <p class="card-text">Camiseta Esqueleto Nike Dri-fit Training Hombre-negro.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+              <div class="card pt-2">
+                <a class="text-decoration-none text-dark" href="moda6.html">
+                  <img src="https://http2.mlstatic.com/D_Q_NP_833064-MCO51457780458_092022-AB.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title mt-0">$139.900</h4>
+                  <p class="card-text">Camiseta Nike Dri-fit Para Hombre-negro.</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+                </a>
+              </div>
+          </div>
+          </div>
+        </div>
+        <button class="botoni carousel-control-prev justify-content-start" type="button" data-bs-target="#carouselExample4" data-bs-slide="prev">
+          <span class=" flecha" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+          </svg></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="botond carousel-control-next justify-content-end" type="button" data-bs-target="#carouselExample4" data-bs-slide="next">
+          <span class=" flecha" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+          </svg></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </div>
+  
+  <button class="vermas"><a class="text-decoration-none text-dark" href="detodo.html">VER MÁS</a></button>
+  
+  <footer class="bg-dark text-light">
+  
+      <table class="table table-dark table-borderless text-center">
+        <br>
+        <tr>
+          <th>Gana Dinero con Nosotros</th>
+          <th>Sobre Nosotros</th>
+          <th>Ayuda</th>
+        </tr>
+        <tr>
+          <td><a href="#" class="pie">Vender productos en Flash-e</a></td>
+          <td><a href="#" class="pie">Terminos & Condiciones</a></td>
+          <td><a href="#" class="pie">Contactanos</a></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="pie"> Programa de Referidos</a></td>
+          <td><a href="#" class="pie"> Privacidad de Datos</a></td>
+          <td><a href="#" class="pie">Problemas con tu Pago</a></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="pie">Anuncia tus Productos</a></td>
+          <td><a href="#" class="pie">Preguntas Frecuentes</a></td>
+          <td><a href="#" class="pie">Denuncia Fraude</a></td>
+        </tr>
+      </table>
+      
+      <div class="ms-5 me-5">
+        <table class="table  text-center">
+          <h2 class="text-center mb-0">Metodos de Pago</h2>
+          <tr>
+            <th>VISA</th>
+            <th>MASTERCARD</th>
+            <th>AMERICAN EXPRESS</th>
+          </tr>
+          <tr class="table-borderless">
+            <td class="mb-0"><img style="width: 60px;" src="./img/visa.png"></td>
+            <td class="mb-0"><img style="width: 60px;" src="./img/mastercard.png"></td>
+            <td class="mb-0"><img style="width: 60px;" src="./img/amex.png"></td>
+          </tr>
+        </table>
+      </div>
+      <p class="text-end me-3" style="font-size: smaller;">© 2024 Flashe.com</p>
+  </footer>
+</body>
+<script src="./js/java.js"></script>
+</html>
+
+
+

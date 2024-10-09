@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/portatil1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body class="bg-body-secondary">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/logo_op2.png" alt="" class="logo_img"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn bg-warning-subtle rounded-0">Todo</button>
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn bg-warning-subtle dropdown-toggle rounded-0 p-1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="moda.html">Moda</a>
+                <a class="dropdown-item" href="accesorios.html">Accesorios</a>
+                <a class="dropdown-item" href="hogar.html">Hogar</a>
+                <a class="dropdown-item" href="Electrodomesticos.html">Electrodomesticos</a>
+                <a class="dropdown-item" href="belleza.html">Belleza</a>
+              </div>
+            </div>
+          </div>
+          <form class="d-flex">
+            <input class="form-control rounded-0 busqueda" type="search" placeholder="¿Que estas buscando?">
+            <button class="btn bg-secondary-subtle my-2 my-sm-0 rounded-0" type="submit"><img src="img/lupa.png" class="lupa" ></button>
+          </form>
+
+        </div>
+        <div class="collapse navbar-collapse lista justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li id="registrate" class="nav-item dropdown">
+                <button  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Registrate</button>
+                <ul class="dropdown-menu dropdown-menu-dark" id="inicioseccion" style="display: none;">
+                  <li>
+                    <a class="dropdown-item" href="crearCuenta.html"> Crear mi Cuenta</a></li>
+                  <li>
+                    <a id="iniciarseccion" class="dropdown-item" href="inicioseccion.html"> Inicia Sección </a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Categorias</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Tegnologia </a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="detecnologia.html">Celulares</a></li>
+                        <li><a class="dropdown-item" href="detecnologia.html">Computación</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Hogar</a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="hogar.html ">Muebles/Sala</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Dormitorio</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">oficina en casa</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Herramientas</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Seguridad para el Hogar</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Ver Mas</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Moda</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="moda.html">Mujer</a></li>
+                        <li><a class="dropdown-item" href="moda.html">Hombre</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Belleza</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="belleza.html">Maquillaje</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Electrobelleza</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Cuidado Personal</a></li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+            
+            <button class="btn" type="button"><img class="carrito" src="./img/pngwing.com (1).png" ></button>
+          </div>
+          
+      </div>
+  </nav>
+  </header>
+
+  <section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 ">
+      <button class="ubicacion border-0  ms-4">
+      <select class="ubicacion bg-body-tertiary border-0 text-center">
+        <option>Ingresa Tu cuidad</option>
+        <option>Bogotá</option>
+        <option>Cartagena</option>
+        <option>Medellín</option>
+        <option>Santa Marta</option>
+        <option>Valledupar</option>
+        <option>barranquilla</option>
+      </select>
+      </button>
+
+      
+
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link oferta" href="ofertas.html">OFERTAS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">CENTRO DE AYUDA</a>
+              <ul class="dropdown-menu dropdown-menu-tertiary">
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con tu pedido</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el sitio web</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el vendedor</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Otros</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a id="rastreoPedido" class="nav-link" href="rastreo.html">RASTREA TU PEDIDO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <div class="cuerpo">
+    <div class="ms-3 ">
+      <div>
+            <button type="button">
+                <img width="44" src="https://http2.mlstatic.com/D_Q_NP_622468-MLA72075490213_102023-R.webp" alt="portatil"> 
+            </button>
+      </div>
+      <div>
+            <button type="button">
+                <img width="44" src="https://http2.mlstatic.com/D_Q_NP_769590-MLA72006184087_092023-R.webp" alt="portatil"> 
+            </button>
+      </div>
+      <div>
+            <button type="button">
+                <img width="44" src="https://http2.mlstatic.com/D_Q_NP_807196-MLA72017692790_102023-R.webp" alt="portatil"> 
+            </button>
+      </div>
+      <div>
+            <button type="button">
+                <img width="44" src="https://http2.mlstatic.com/D_Q_NP_636156-MLA72017742000_102023-R.webp" alt="portatil"> 
+            </button>
+      </div>
+      <div>
+            <button type="button">
+                <img width="44" src="https://http2.mlstatic.com/D_Q_NP_978994-MLA72075647203_102023-R.webp" alt="portatil"> 
+            </button>
+      </div>
+    </div>
+      
+    <div class="mt-3">
+      <img class="fotoprincipal" src="https://http2.mlstatic.com/D_NQ_NP_769590-MLA72006184087_092023-O.webp">
+    </div>
+    
+    <div class="mt-3 ms-3 infoproducto">
+        <h2>Apple Watch SE GPS (2da Gen) • Caja de aluminio color medianoche de 44 mm • Correa deportiva color medianoche - M/L.</h2><br>
+        <h1>$1.221.900</h1>
+        <h6 class="subtitle mb-0 text-danger">$2.216.500</h6>
+        <div><br>
+            <p>Lo que tienes que saber de este producto</p>
+            <ul>
+              <li>Permite recibir llamadas y contestar mensajes directamente desde tu muñeca.</li>
+              <li>Neutro en Carbono.</li>
+              <li>Funcionalidades de Salud avanzadas con medición de ritmo cardíaco, sueño y estados de ánimo.</li>
+              <li>Recursos avanzados de seguridad, incluyendo Detección de Caída, SOS de Emergencia y Detección de Accidente.</li>
+              <li>Compatible con los dispositivos y servicios de Apple.</li>
+              <li>Resistente al agua hasta 50 metros</li>
+              <li>Acompaña tu actividad diaria y muestra tus tendencias en la app Fitness en el iPhone. (editado).</li>
+            </ul>
+            <a href="#">Ver caracteristicas</a>
+        </div>
+    </div>
+    <div class="m-3 cuadropago"><br>
+        <h5 class="ms-3">Medios de pago</h5><br>
+        <h6 class="ms-3">Tarjetas de crédito</h6>
+        <div class="d-flex metodopagos m-3">
+          <img src="./img/visa.png" width="40px">
+          <img src="./img/amex.png" width="40px">
+          <img src="./img/mastercard.png" width="40px">
+        </div>
+        <h6 class="ms-3">Tarjetas de débito</h6>
+        <div class="d-flex metodopagos m-3">
+          <img src="./img/visa.png" width="40px">
+          <img src="./img/mastercard.png" width="40px">
+        </div>
+        <h6  class="ms-3">Efectivo</h6>
+    </div>
+
+    <div class="m-3 descripcionproducto">
+      <h2>Descripción del producto</h2><br>
+      <p>Tiene las funcionalidades esenciales para ayudarte a llevar una vida más activa, saludable, segura y conectada.
+    
+        • POR QUÉ EL APPLE WATCH SE — Todo lo que necesitas para mantener la motivación, llevar una vida activa, estar en contacto, seguir de cerca tu salud y cuidar tu seguridad. Pila Inteligente y las apps rediseñadas de watchOS 10 te dan más información de un vistazo. Y con funcionalidades como Detección de Choques (1) y métricas avanzadas de entrenamiento, el Apple Watch SE está en su mejor momento y más a tu alcance que nunca.
+        
+        • NEUTRO EN CARBONO—Combina un Apple Watch SE con caja de aluminio con una correa loop deportiva blanco estelar, color medianoche o azul invierno para crear una opción neutra en carbono (2).
+        
+        • FUNCIONALIDADES DE SALUD Y SEGURIDAD — Detección de Caídas, Detección de Choques y Emergencia SOS (3) pueden pedir ayuda por ti cuando más la necesitas. Obtén información relevante sobre tu salud, incluyendo notificaciones si tienes un ritmo cardiaco irregular (4) o una frecuencia cardiaca demasiado alta o baja.
+        
+        • SIMPLEMENTE COMPATIBLE — Funciona a la perfección con tus dispositivos y servicios de Apple. Desbloquea tu Mac de forma automática. Encuentra tus dispositivos fácilmente. Paga y envía dinero con Apple Pay (5). El Apple Watch SE requiere un iPhone XS o posterior con iOS 17 o posterior.
+        
+        • DISEÑADO PARA NADAR Y ATRAPAR MIRADAS — Resistente al agua hasta 50 metros (6). Tres acabados. Y una cubierta posterior a tono con la caja que se fabrica mediante un proceso que reduce sus emisiones de carbono.
+        
+        • FÁCIL DE PERSONALIZAR — Combina una correa del estilo, material y color que más te guste con una carátula personalizable para que tu reloj esté a tono con tu estado de ánimo o un momento especial.
+        
+        • UN PODEROSO COMPAÑERO DE ENTRENAMIENTO — La app Entrenamiento incluye muchísimas formas de entrenar y métricas avanzadas que te aportan más datos sobre tu rendimiento. Además, el Apple Watch viene con tres meses gratis de Apple Fitness+ (7).
+        
+        • MANTENTE EN CONTACTO — Envía un mensaje de texto, contesta una llamada, escucha música y podcasts, usa Siri o pide ayuda con Emergencia SOS (1). El Apple Watch SE (GPS) funciona con tu iPhone o con Wi-Fi para mantenerte en contacto.
+        
+        • FUNCIONALIDADES DE SALUD AVANZADAS — Recibe notificaciones si tienes un ritmo cardiaco irregular (4). Descubre cuánto tiempo pasas en cada fase del sueño: MOR, sueño ligero y sueño profundo. Y observa tus estados de ánimo para entender mejor tus emociones y desarrollar resiliencia.
+        
+        • INNOVADORAS FUNCIONALIDADES DE SEGURIDAD — Detección de Caídas (3) y Detección de Choques (2) pueden comunicarse con los servicios de emergencia en caso de que tengas una caída fuerte o un accidente grave de auto. Y con Emergencia SOS puedes pedir ayuda con tan sólo presionar un botón (1).
+        
+        Aviso legal:
+        Apple Watch SE requiere iPhone XS o posterior con iOS 17 o posterior.
+        (1) Emergency SOS requiere una conexión de red celular o llamadas Wi-Fi con una conexión a Internet desde su Apple Watch o iPhone, que debe estar cerca.
+        (2) Obtenga más información en la página oficial de Apple.
+        (3) Las actualizaciones de la función de detección de caídas están disponibles en Apple Watch Series 4 y posteriores con watchOS 8 y posteriores.
+        (4) La notificación de frecuencia cardíaca irregular requiere las últimas versiones de watchOS e iOS. No está recomendado para menores de 22 años ni para personas que ya hayan sido diagnosticadas con fibrilación auricular.
+        (5) Apple Pay no está disponible en todos los países. Para obtener una lista de países y regiones con Apple Pay, consulte la página oficial de Apple.
+        (6) Apple Watch SE tiene una resistencia al agua de 50 metros según ISO 22810:2010. Esto significa que se puede utilizar para actividades en aguas poco profundas, como nadar en una piscina o en el mar. El Apple Watch SE no debe usarse para bucear, esquiar en agua u otras actividades que impliquen acelerar a través del agua o sumergirse más profundamente. La resistencia al agua no es una condición permanente y puede disminuir con el tiempo. Consulte la página oficial de Apple.
+        (7) Se requiere suscripción a Apple Fitness+.</p><br>
+      <div class="preguntas">
+          <label class="preguntale" for="pregunta">Pregúntale al vendedor</label><br>
+          <input class="cuadropregunta" type="text" name="pregunta" placeholder="Escribe tu pregunta...">
+          <button class="botonpregunta" type="button">Preguntar</button>
+      </div><br><br>
+    </div>
+  </div><br><br>
+
+  <div class=" recomendados">
+    <h4>TAMBIÉN TE PUEDE INTERESAR</h4>
+    <div class="card-group ">
+      <div class="card m-1 p-2 ">
+        <a class="text-decoration-none text-dark" href="reloj2.html">
+          <img src="https://http2.mlstatic.com/D_Q_NP_933551-MLU77947858360_082024-AB.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title mt-0">$1.412.900</h4>
+            <p class="card-text">Apple Watch SE GPS - Caja de aluminio blanco estelar 44 mm - Correa deportiva blanco estelar - Patrón.</p>
+            <p class="card-text envio">Envío Gratis</p>
+          </div>
+        </a>
+      </div>
+      <div class="card m-1 pt-2 ">
+        <a class="text-decoration-none text-dark" href="reloj3.html">
+          <img src="	https://http2.mlstatic.com/D_Q_NP_809370-MLA72016039184_102023-AB.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title mt-0">$1.022.900</h4>
+            <p class="card-text">Apple Watch SE GPS (2da Gen) • Caja de aluminio color medianoche de 40 mm • Correa deportiva color medianoche - M/L.</p>
+            <p class="card-text envio">Envío Gratis</p>
+          </div>
+        </a>
+      </div>
+      <div class="card m-1 pt-2 ">
+        <a class="text-decoration-none text-dark" href="reloj4.html">
+          <img src="https://http2.mlstatic.com/D_Q_NP_922335-MLA52128091594_102022-AB.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title mt-0">$1.883.900</h4>
+            <p class="card-text">Apple Watch Ultra GPS + Celular - Caja de titanio 49 mm - Correa Ocean medianoche.</p>
+            <p class="card-text envio">Envío Gratis</p>
+          </div>
+        </a>
+      </div>
+      <div class="card m-1 pt-2 ">
+        <a class="text-decoration-none text-dark" href="reloj1.html">
+          <img src="https://http2.mlstatic.com/D_Q_NP_733580-MLA72063241888_102023-W.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title mt-0">$1.659.900</h4>
+            <p class="card-text">Apple Watch Series 9 GPS • Caja de aluminio color medianoche de 45 mm.</p>
+            <p class="card-text envio">Envío Gratis</p>
+          </div>
+        </a>
+      </div>
+      <div class="card m-1 pt-2 ">
+        <a class="text-decoration-none text-dark" href="reloj6.html">
+          <img src="https://http2.mlstatic.com/D_Q_NP_731806-MLU74368634358_022024-AB.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title mt-0">$488.800</h4>
+            <p class="card-text">Smartwatch Huawei Watch Fit 3 Verde.</p>
+            <p class="card-text envio">Envío Gratis</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div> <br><br><br>
+
+  <footer class="bg-dark text-light">
+
+    <table class="table table-dark table-borderless text-center">
+      <br>
+      <tr>
+        <th>Gana Dinero con Nosotros</th>
+        <th>Sobre Nosotros</th>
+        <th>Ayuda</th>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Vender productos en Flash-e</a></td>
+        <td><a href="#" class="pie">Terminos & Condiciones</a></td>
+        <td><a href="#" class="pie">Contactanos</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie"> Programa de Referidos</a></td>
+        <td><a href="#" class="pie"> Privacidad de Datos</a></td>
+        <td><a href="#" class="pie">Problemas con tu Pago</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Anuncia tus Productos</a></td>
+        <td><a href="#" class="pie">Preguntas Frecuentes</a></td>
+        <td><a href="#" class="pie">Denuncia Fraude</a></td>
+      </tr>
+    </table>
+    
+    <div class="ms-5 me-5">
+      <table class="table  text-center">
+        <h2 class="text-center mb-0">Metodos de Pago</h2>
+        <tr>
+          <th>VISA</th>
+          <th>MASTERCARD</th>
+          <th>AMERICAN EXPRESS</th>
+        </tr>
+        <tr class="table-borderless">
+          <td class="mb-0"><img style="width: 60px;" src="./img/visa.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/mastercard.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/amex.png"></td>
+        </tr>
+      </table>
+    </div>
+    <p class="text-end me-3" style="font-size: smaller;">© 2024 Flashe.com</p>
+      </div>
+        
+    </div>
+  </footer>
+</body>
+<script src="./js/java.js"></script>
+</html>

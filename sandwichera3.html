@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/portatil1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body class="bg-body-secondary">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/logo_op2.png" alt="" class="logo_img"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn bg-warning-subtle rounded-0">Todo</button>
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn bg-warning-subtle dropdown-toggle rounded-0 p-1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="moda.html">Moda</a>
+                <a class="dropdown-item" href="accesorios.html">Accesorios</a>
+                <a class="dropdown-item" href="hogar.html">Hogar</a>
+                <a class="dropdown-item" href="Electrodomesticos.html">Electrodomesticos</a>
+                <a class="dropdown-item" href="belleza.html">Belleza</a>
+              </div>
+            </div>
+          </div>
+          <form class="d-flex">
+            <input class="form-control rounded-0 busqueda" type="search" placeholder="¿Que estas buscando?">
+            <button class="btn bg-secondary-subtle my-2 my-sm-0 rounded-0" type="submit"><img src="img/lupa.png" class="lupa" ></button>
+          </form>
+
+        </div>
+        <div class="collapse navbar-collapse lista justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li id="registrate" class="nav-item dropdown">
+                <button  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Registrate</button>
+                <ul class="dropdown-menu dropdown-menu-dark" id="inicioseccion" style="display: none;">
+                  <li>
+                    <a class="dropdown-item" href="crearCuenta.html"> Crear mi Cuenta</a></li>
+                  <li>
+                    <a id="iniciarseccion" class="dropdown-item" href="inicioseccion.html"> Inicia Sección </a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Categorias</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Tegnologia </a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="detecnologia.html">Celulares</a></li>
+                        <li><a class="dropdown-item" href="detecnologia.html">Computación</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Hogar</a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="hogar.html ">Muebles/Sala</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Dormitorio</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">oficina en casa</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Herramientas</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Seguridad para el Hogar</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Ver Mas</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Moda</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="moda.html">Mujer</a></li>
+                        <li><a class="dropdown-item" href="moda.html">Hombre</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Belleza</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="belleza.html">Maquillaje</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Electrobelleza</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Cuidado Personal</a></li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+            
+            <button class="btn" type="button"><img class="carrito" src="./img/pngwing.com (1).png" ></button>
+          </div>
+          
+      </div>
+  </nav>
+  </header>
+
+  <section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 ">
+      <button class="ubicacion border-0  ms-4">
+      <select class="ubicacion bg-body-tertiary border-0 text-center">
+        <option>Ingresa Tu cuidad</option>
+        <option>Bogotá</option>
+        <option>Cartagena</option>
+        <option>Medellín</option>
+        <option>Santa Marta</option>
+        <option>Valledupar</option>
+        <option>barranquilla</option>
+      </select>
+      </button>
+
+      
+
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link oferta" href="ofertas.html">OFERTAS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">CENTRO DE AYUDA</a>
+              <ul class="dropdown-menu dropdown-menu-tertiary">
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con tu pedido</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el sitio web</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el vendedor</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Otros</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a id="rastreoPedido" class="nav-link" href="rastreo.html">RASTREA TU PEDIDO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <div class="cuerpo">
+    <div class="d-flex">
+      <div class="ms-3 ">
+        <div>
+            <button type="button">
+                <img width="44" src="https://http2.mlstatic.com/D_Q_NP_688553-MLU78090412114_082024-R.webp" alt="portatil"> 
+            </button>
+        </div>
+        <div>
+            <button type="button">
+                <img width="44" src="https://http2.mlstatic.com/D_Q_NP_733599-MLU75826226581_042024-R.webp" alt="portatil"> 
+            </button>
+        </div>
+        <div>
+            <button type="button">
+                <img width="44" src="https://http2.mlstatic.com/D_Q_NP_953638-MLU78090718148_082024-R.webp" alt="portatil"> 
+            </button>
+        </div>
+      </div>
+      
+      <div class="mt-3">
+        <img class="fotoprincipal" src="https://http2.mlstatic.com/D_NQ_NP_688553-MLU78090412114_082024-O.webp">
+      </div>
+  
+      <div class="mt-3 ms-3 infoproducto">
+        <h2>Sandwichera Waflera Donera Y Parrilla Potencia 1200w Maquina 4 En 1 Color Negro.</h2><br>
+        <h1>$104.900</h1>
+        <div><br>
+            <p>Lo que tienes que saber de este producto</p>
+            <ul>
+              <li>Voltaje: 110V</li>
+              <li>Tiene con capacidad para 2 sánduches.</li>
+              <li>Cuenta con placas para grill.</li>
+              <li>Posee una superficie antiadherente que desprende los alimentos con facilidad.</li>
+              <li>Las placas son removibles e intercambiables.</li>
+            </ul>
+            <a href="#">Ver caracteristicas</a>
+        </div>
+      </div>
+  
+      <div class="m-3 cuadropago"><br>
+        <h5 class="ms-3">Medios de pago</h5><br>
+        <h6 class="ms-3">Tarjetas de crédito</h6>
+        <div class="d-flex metodopagos m-3">
+          <img src="./img/visa.png" width="40px">
+          <img src="./img/amex.png" width="40px">
+          <img src="./img/mastercard.png" width="40px">
+        </div>
+        <h6 class="ms-3">Tarjetas de débito</h6>
+        <div class="d-flex metodopagos m-3">
+          <img src="./img/visa.png" width="40px">
+          <img src="./img/mastercard.png" width="40px">
+        </div>
+        <h6  class="ms-3">Efectivo</h6>
+      </div>
+    </div><br><br>
+
+    <div class="m-3 descripcionproducto">
+      <h2>Descripción del producto</h2><br>
+      <p>Producto: Máquina 4 en 1 Sandwichera, Waflera Donera y parrilla
+
+        Experimenta la versatilidad culinaria con nuestra Máquina 4 en 1, que combina las funciones de sandwichera, waflera y donutera en un solo dispositivo. Esta ingeniosa máquina no solo te permite diversificar tu menú diario, sino que también se adapta a tus necesidades culinarias de manera eficiente y conveniente.
+        
+        Características Destacadas:
+        
+        Versatilidad Culinary 4 en 1:
+        
+        Convierte tu cocina en un espacio creativo con una sola máquina que te permite preparar deliciosos sándwiches, irresistibles gofres y suaves donuts. Un aparato, múltiples opciones para satisfacer todos los antojos.
+        Placas Antiadherentes Intercambiables:
+        
+        Las placas intercambiables con recubrimiento antiadherente facilitan la preparación de alimentos y aseguran una limpieza sin complicaciones. Puedes cambiar fácilmente entre las placas de sándwich, waflera y donutera según tus preferencias y necesidades.
+        Calentamiento Rápido y Uniforme:
+        
+        Gracias a su sistema de calentamiento rápido, la máquina alcanza la temperatura ideal en pocos minutos, garantizando una cocción uniforme y resultados perfectos en cada uso.
+        Diseño Compacto y Almacenamiento Eficiente:
+        
+        El diseño compacto de la máquina permite un almacenamiento fácil y eficiente, ahorrando espacio en tu cocina. Su aspecto moderno y elegante añade un toque estilizado a tu espacio culinario.
+        Control de Temperatura Ajustable:
+        
+        Personaliza la temperatura según tus preferencias culinarias. Controla el nivel de dorado de tus sándwiches, gofres o donuts para satisfacer todos los gustos en la mesa.
+        Luces Indicadoras Intuitivas:
+        
+        Las luces indicadoras te guían durante el proceso de cocción, mostrando cuándo la máquina está lista para usar y cuándo tus delicias están perfectamente cocidas.
+        Oportunidad de Creatividad Culinaria:
+        
+        Inspira tu creatividad en la cocina al experimentar con una amplia gama de ingredientes y recetas. Desde sándwiches gourmet hasta gofres decadentes y donuts esponjosos, esta máquina te brinda la libertad de explorar nuevos sabores y presentaciones.
+        En resumen, nuestra Máquina 3 en 1 Sandwichera, Waflera y Donutera no solo es una adición práctica a tu cocina, sino que también responde a la necesidad de diversificar tus opciones culinarias de manera eficiente y deliciosa. Experimenta la comodidad y la creatividad en cada bocado con esta versátil y elegante máquina culinaria.
+        
+        Lo que obtienes en tu compra
+        
+        1 x Maquina electrica 4 en 1
+        1 x Placas para dona
+        1 x Placas para wafles
+        1 x Placas para sandwich
+        1 x Placa de parrilla.</p><br>
+      <div class="preguntas">
+          <label class="preguntale" for="pregunta">Pregúntale al vendedor</label><br>
+          <input class="cuadropregunta" type="text" name="pregunta" placeholder="Escribe tu pregunta...">
+          <button class="botonpregunta" type="button">Preguntar</button>
+      </div><br><br>
+    </div>
+  </div>
+
+  <div class=" recomendados">
+    <h4>TAMBIÉN TE PUEDE INTERESAR</h4>
+    <div class="card-group ">
+        <div class="card m-1 p-2 ">
+            <a class="text-decoration-none text-dark" href="sandwichera2.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_880600-MLU74449786508_022024-AB.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h2 class="card-title mt-0">$107.800</h2>
+                  <p class="card-text">Sandwichera Oster® Compacta Con Platos Hondos Ckstsm400 Color Negro 110V</p>
+                  <p class="card-text envio">Envío Gratis</p>
+                </div>
+              </a>
+        </div>
+        <div class="card m-1 pt-2 ">
+            <a class="text-decoration-none text-dark" href="sandwichera1.html">
+                <img src="https://http2.mlstatic.com/D_Q_NP_623983-MLU74360387131_022024-W.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="subtitle mb-0 text-danger">$250.000</h6>
+                <h2 class="card-title mt-0">$175.562</h2>
+                <p class="card-text">Sanduchera Asador Panini Imusa Grill 180.</p>
+                <p class="card-text envio">Envío Gratis</p>
+              </div>
+              </a>
+        </div>
+        <div class="card m-1 pt-2 ">
+          <a class="text-decoration-none text-dark" href="sandwichera4.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_895007-MLU74519893607_022024-AB.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title mt-0">$179.900</h4>
+              <p class="card-text">Sanduchera Manual Doble Imusa Mango De Madera Color Gris.</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+        </div>
+        <div class="card m-1 pt-2 ">
+          <a class="text-decoration-none text-dark" href="sandwichera5.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_890646-MLU70105722095_062023-AB.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title mt-0">$112.224</h4>
+              <p class="card-text">Sanduchera Grill Panini Home Elements - Asador Grill Panini Color Negro</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+        </div>
+        <div class="card m-1 pt-2 ">
+          <a class="text-decoration-none text-dark" href="sandwichera6.html">
+            <img src="https://http2.mlstatic.com/D_Q_NP_697630-MLU54963062184_042023-AB.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title mt-0">$69.000</h4>
+              <p class="card-text">Sanduchera Universal 2 Puestos Aliada L88215 Antiadherente Color Negro 110V.</p>
+              <p class="card-text envio">Envío Gratis</p>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div> <br><br><br>
+
+  <footer class="bg-dark text-light">
+
+    <table class="table table-dark table-borderless text-center">
+      <br>
+      <tr>
+        <th>Gana Dinero con Nosotros</th>
+        <th>Sobre Nosotros</th>
+        <th>Ayuda</th>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Vender productos en Flash-e</a></td>
+        <td><a href="#" class="pie">Terminos & Condiciones</a></td>
+        <td><a href="#" class="pie">Contactanos</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie"> Programa de Referidos</a></td>
+        <td><a href="#" class="pie"> Privacidad de Datos</a></td>
+        <td><a href="#" class="pie">Problemas con tu Pago</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Anuncia tus Productos</a></td>
+        <td><a href="#" class="pie">Preguntas Frecuentes</a></td>
+        <td><a href="#" class="pie">Denuncia Fraude</a></td>
+      </tr>
+    </table>
+    
+    <div class="ms-5 me-5">
+      <table class="table  text-center">
+        <h2 class="text-center mb-0">Metodos de Pago</h2>
+        <tr>
+          <th>VISA</th>
+          <th>MASTERCARD</th>
+          <th>AMERICAN EXPRESS</th>
+        </tr>
+        <tr class="table-borderless">
+          <td class="mb-0"><img style="width: 60px;" src="./img/visa.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/mastercard.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/amex.png"></td>
+        </tr>
+      </table>
+    </div>
+    <p class="text-end me-3" style="font-size: smaller;">© 2024 Flashe.com</p>
+      </div>
+        
+    </div>
+  </footer>
+</body>
+<script src="./js/java.js"></script>
+</html>

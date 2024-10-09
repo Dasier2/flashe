@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/portatil1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body class="bg-body-secondary">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/logo_op2.png" alt="" class="logo_img"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn bg-warning-subtle rounded-0">Todo</button>
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn bg-warning-subtle dropdown-toggle rounded-0 p-1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="moda.html">Moda</a>
+                <a class="dropdown-item" href="accesorios.html">Accesorios</a>
+                <a class="dropdown-item" href="hogar.html">Hogar</a>
+                <a class="dropdown-item" href="Electrodomesticos.html">Electrodomesticos</a>
+                <a class="dropdown-item" href="belleza.html">Belleza</a>
+              </div>
+            </div>
+          </div>
+          <form class="d-flex">
+            <input class="form-control rounded-0 busqueda" type="search" placeholder="¿Que estas buscando?">
+            <button class="btn bg-secondary-subtle my-2 my-sm-0 rounded-0" type="submit"><img src="img/lupa.png" class="lupa" ></button>
+          </form>
+
+        </div>
+        <div class="collapse navbar-collapse lista justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li id="registrate" class="nav-item dropdown">
+                <button  class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Registrate</button>
+                <ul class="dropdown-menu dropdown-menu-dark" id="inicioseccion" style="display: none;">
+                  <li>
+                    <a class="dropdown-item" href="crearCuenta.html"> Crear mi Cuenta</a></li>
+                  <li>
+                    <a id="iniciarseccion" class="dropdown-item" href="inicioseccion.html"> Inicia Sección </a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Categorias</a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Tegnologia </a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="detecnologia.html">Celulares</a></li>
+                        <li><a class="dropdown-item" href="detecnologia.html">Computación</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Hogar</a>
+                      <ul class="dropdown-menu submenu submenu-left ">
+                        <li><a class="dropdown-item" href="hogar.html ">Muebles/Sala</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Dormitorio</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">oficina en casa</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Herramientas</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Seguridad para el Hogar</a></li>
+                        <li><a class="dropdown-item" href="hogar.html">Ver Mas</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Moda</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="moda.html">Mujer</a></li>
+                        <li><a class="dropdown-item" href="moda.html">Hombre</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#" class="dropdown-item">&lsaquo; Belleza</a>
+                      <ul class="dropdown-menu submenu submenu-left">
+                        <li><a class="dropdown-item" href="belleza.html">Maquillaje</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Electrobelleza</a></li>
+                        <li><a class="dropdown-item" href="belleza.html">Cuidado Personal</a></li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+            
+            <button class="btn" type="button"><img class="carrito" src="./img/pngwing.com (1).png" ></button>
+          </div>
+          
+      </div>
+  </nav>
+  </header>
+
+  <section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 ">
+      <button class="ubicacion border-0  ms-4">
+      <select class="ubicacion bg-body-tertiary border-0 text-center">
+        <option>Ingresa Tu cuidad</option>
+        <option>Bogotá</option>
+        <option>Cartagena</option>
+        <option>Medellín</option>
+        <option>Santa Marta</option>
+        <option>Valledupar</option>
+        <option>barranquilla</option>
+      </select>
+      </button>
+
+      
+
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link oferta" href="ofertas.html">OFERTAS</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">CENTRO DE AYUDA</a>
+              <ul class="dropdown-menu dropdown-menu-tertiary">
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con tu pedido</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el sitio web</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Problemas con el vendedor</a></li>
+                <li><a class="dropdown-item" href="./centroAyuda.html">Otros</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a id="rastreoPedido" class="nav-link" href="rastreo.html">RASTREA TU PEDIDO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <div class="cuerpo">
+    <div class="d-flex">
+        <div class="ms-3 ">
+            <div>
+                <button type="button">
+                    <img width="44" src="https://http2.mlstatic.com/D_Q_NP_922335-MLA52128091594_102022-R.webp" alt="portatil"> 
+                </button>
+            </div>
+            <div>
+                <button type="button">
+                    <img width="44" src="https://http2.mlstatic.com/D_Q_NP_685216-MLA52128146115_102022-R.webp" alt="portatil"> 
+                </button>
+            </div>
+            <div>
+                <button type="button">
+                    <img width="44" src="https://http2.mlstatic.com/D_Q_NP_739434-MLA52128146215_102022-R.webp" alt="portatil"> 
+                </button>
+            </div>
+            <div>
+                <button type="button">
+                    <img width="44" src="https://http2.mlstatic.com/D_Q_NP_748937-MLA52128091596_102022-R.webp" alt="portatil"> 
+                </button>
+            </div>
+          </div>
+          
+          <div class="mt-3">
+            <img class="fotoprincipal" src="https://http2.mlstatic.com/D_NQ_NP_922335-MLA52128091594_102022-O.webp">
+          </div>
+        
+          <div class="mt-3 ms-3 infoproducto">
+            <h2>Apple Watch Ultra GPS + Celular - Caja de titanio 49 mm - Correa Ocean medianoche.</h2><br>
+            <h1>$2.999.250</h1>
+            <h6 class="subtitle mb-0 text-danger">$3.999.000</h6>
+            <div><br>
+                <p>Lo que tienes que saber de este producto</p>
+                <ul>
+                  <li>Recursos y sensores especializados y tres nuevas pulseras creadas para la exploración, aventura y deportes de resistencia.</li>
+                  <li>Caja de titanio aeroespacial de 49mm para un equilibrio ideal entre peso, fuerza y resistencia a la corrosión.</li>
+                  <li>La más grande y más brillante pantalla para Apple Watch para facilitar la lectura bajo todas las condiciones.</li>
+                  <li>Hasta 36 horas de carga con uso normal y opción de usar los ajustes de poca energía para aumentar la duración.</li>
+                  <li>Sistema de GPS de precisión y dupla frecuencia, que ofrece la ubicación exacta para calcular distancia, ritmo y mapas de recorridos.</li>
+                  <li>Resistencia al agua (100 metros).</li>
+                </ul>
+                <a href="#">Ver caracteristicas</a>
+            </div>
+          </div>
+          <div class="m-3 cuadropago"><br>
+            <h5 class="ms-3">Medios de pago</h5><br>
+            <h6 class="ms-3">Tarjetas de crédito</h6>
+            <div class="d-flex metodopagos m-3">
+              <img src="./img/visa.png" width="40px">
+              <img src="./img/amex.png" width="40px">
+              <img src="./img/mastercard.png" width="40px">
+            </div>
+            <h6 class="ms-3">Tarjetas de débito</h6>
+            <div class="d-flex metodopagos m-3">
+              <img src="./img/visa.png" width="40px">
+              <img src="./img/mastercard.png" width="40px">
+            </div>
+            <h6  class="ms-3">Efectivo</h6>
+          </div>
+        </div><br><br>
+        
+        <div class="m-3 descripcionproducto">
+          <h2>Descripción del producto</h2><br>
+          <p>Llegó el Apple Watch más fuerte y equipado que existe. Diseñado para la exploración, la aventura y los deportes de resistencia. Con una caja de 49 mm fabricada con titanio de calidad aeroespacial, batería para varios días, apps especializadas que trabajan en equipo con los sensores avanzados y un nuevo Botón de Acción personalizable.
+        
+            Por qué el Apple Watch Ultra
+            El Apple Watch más fuerte y equipado que existe fue diseñado para todo tipo de deportistas, con correas optimizadas para deportes acuáticos, de resistencia y de montaña. Tiene una batería que dura hasta 36 horas y todas las funcionalidades del Apple Watch que te ayudan a llevar una vida saludable, segura y conectada.
+            
+            Fuerte al extremo, equipado al máximo
+            Caja de titanio de 49 mm resistente a la corrosión. Una Digital Crown más grande y botones más accesibles. Resistencia al agua hasta 100 metros. Y un Botón de Acción personalizable para tener acceso inmediato a un montón de funciones.
+            
+            La pantalla más grande y brillante hasta ahora
+            En la brillante pantalla Retina siempre activa todo es muy fácil de ver, incluso a pleno sol. Y hay más espacio para agregar complicaciones y darle un toque personal a tu carátula.
+            
+            Para deportes de resistencia
+            Métricas avanzadas en la app Entrenamiento, con datos sobre tu forma de correr y Zonas de Frecuencia Cardiaca. GPS de precisión y doble frecuencia para calcular distancia, ritmo y rutas con gran exactitud. Y correa Trail, delgada, ligera y flexible, diseñada especialmente para aquellos cuya pasión por correr no tiene límites.
+            
+            Para deportes de montaña
+            App Brújula rediseñada con visualizaciones y funcionalidades totalmente nuevas. Puntos de Referencia para marcar tu ubicación. Funcionalidad Retornar, que usa el GPS para registrar tu recorrido y ayudarte a volver sobre tus propios pasos. Y correa Alpine, extremadamente resistente y segura, diseñada pensando en las necesidades de excursionistas y escaladores.
+            
+            Para deportes acuáticos
+            Diseñado para deportes acuáticos de alto impacto y buceo recreativo. App Oceanic+ para que tengas una computadora de buceo en tu muñeca. Y correa Ocean, ligera y flexible, con una hebilla y un anillo ajustable de titanio que la mantienen en su lugar incluso cuando practicas deportes acuáticos de alta velocidad.
+            
+            Las funcionalidades de salud y seguridad más avanzadas
+            Sus avanzados sensores te brindan información detallada sobre tu salud. Detección de Caídas y Detección de Choques pueden comunicarse automáticamente con los servicios de emergencia en caso de que tengas una caída fuerte o un accidente de auto grave. Y el Botón de Acción te permite activar una sirena que puede oírse en un radio de hasta 180 metros.
+            
+            Apps en tu muñeca
+            Con acceso a miles de apps del App Store al alcance de tu mano, el Apple Watch es el dispositivo personal perfecto para todo lo que te apasiona.
+            
+            La libertad te está llamando
+            Todos los modelos vienen con conexión celular integrada: haz llamadas y envía mensajes sin tu iPhone, escucha tu música y podcasts favoritos en streaming y encuentra el camino correcto con Mapas.</p><br>
+          <div class="preguntas">
+              <label class="preguntale" for="pregunta">Pregúntale al vendedor</label><br>
+              <input class="cuadropregunta" type="text" name="pregunta" placeholder="Escribe tu pregunta...">
+              <button class="botonpregunta" type="button">Preguntar</button>
+          </div><br><br>
+        </div>
+  </div>
+
+  <div class=" recomendados">
+    <h4>TAMBIÉN TE PUEDE INTERESAR</h4>
+    <div class="card-group ">
+      <div class="card m-1 p-2 ">
+        <a class="text-decoration-none text-dark" href="reloj2.html">
+          <img src="https://http2.mlstatic.com/D_Q_NP_933551-MLU77947858360_082024-AB.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title mt-0">$1.412.900</h4>
+            <p class="card-text">Apple Watch SE GPS - Caja de aluminio blanco estelar 44 mm - Correa deportiva blanco estelar - Patrón.</p>
+            <p class="card-text envio">Envío Gratis</p>
+          </div>
+        </a>
+      </div>
+      <div class="card m-1 pt-2 ">
+        <a class="text-decoration-none text-dark" href="reloj3.html">
+          <img src="	https://http2.mlstatic.com/D_Q_NP_809370-MLA72016039184_102023-AB.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title mt-0">$1.022.900</h4>
+            <p class="card-text">Apple Watch SE GPS (2da Gen) • Caja de aluminio color medianoche de 40 mm • Correa deportiva color medianoche - M/L.</p>
+            <p class="card-text envio">Envío Gratis</p>
+          </div>
+        </a>
+      </div>
+      <div class="card m-1 pt-2 ">
+        <a class="text-decoration-none text-dark" href="reloj1.html">
+          <img src="https://http2.mlstatic.com/D_Q_NP_733580-MLA72063241888_102023-W.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title mt-0">$1.659.900</h4>
+            <p class="card-text">Apple Watch Series 9 GPS • Caja de aluminio color medianoche de 45 mm.</p>
+            <p class="card-text envio">Envío Gratis</p>
+          </div>
+        </a>
+      </div>
+      <div class="card m-1 pt-2 ">
+        <a class="text-decoration-none text-dark" href="reloj5.html">
+          <img src="https://http2.mlstatic.com/D_Q_NP_622468-MLA72075490213_102023-AB.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title mt-0">$1.221.900</h4>
+            <p class="card-text">Apple Watch SE GPS (2da Gen) • Caja de aluminio color medianoche de 44 mm • Correa deportiva color medianoche - M/L.</p>
+            <p class="card-text envio">Envío Gratis</p>
+          </div>
+        </a>
+      </div>
+      <div class="card m-1 pt-2 ">
+        <a class="text-decoration-none text-dark" href="reloj6.html">
+          <img src="https://http2.mlstatic.com/D_Q_NP_731806-MLU74368634358_022024-AB.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4 class="card-title mt-0">$488.800</h4>
+            <p class="card-text">Smartwatch Huawei Watch Fit 3 Verde.</p>
+            <p class="card-text envio">Envío Gratis</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div> <br><br><br>
+
+  <footer class="bg-dark text-light">
+
+    <table class="table table-dark table-borderless text-center">
+      <br>
+      <tr>
+        <th>Gana Dinero con Nosotros</th>
+        <th>Sobre Nosotros</th>
+        <th>Ayuda</th>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Vender productos en Flash-e</a></td>
+        <td><a href="#" class="pie">Terminos & Condiciones</a></td>
+        <td><a href="#" class="pie">Contactanos</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie"> Programa de Referidos</a></td>
+        <td><a href="#" class="pie"> Privacidad de Datos</a></td>
+        <td><a href="#" class="pie">Problemas con tu Pago</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="pie">Anuncia tus Productos</a></td>
+        <td><a href="#" class="pie">Preguntas Frecuentes</a></td>
+        <td><a href="#" class="pie">Denuncia Fraude</a></td>
+      </tr>
+    </table>
+    
+    <div class="ms-5 me-5">
+      <table class="table  text-center">
+        <h2 class="text-center mb-0">Metodos de Pago</h2>
+        <tr>
+          <th>VISA</th>
+          <th>MASTERCARD</th>
+          <th>AMERICAN EXPRESS</th>
+        </tr>
+        <tr class="table-borderless">
+          <td class="mb-0"><img style="width: 60px;" src="./img/visa.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/mastercard.png"></td>
+          <td class="mb-0"><img style="width: 60px;" src="./img/amex.png"></td>
+        </tr>
+      </table>
+    </div>
+    <p class="text-end me-3" style="font-size: smaller;">© 2024 Flashe.com</p>
+      </div>
+        
+    </div>
+  </footer>
+</body>
+<script src="./js/java.js"></script>
+</html>
